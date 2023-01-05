@@ -1,0 +1,49 @@
+{
+  "promo": [
+    {
+      "id": 1,
+      "images": "",
+      "alt": "promotion",
+      "title": "Colombia Supremo",
+      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "oldPrice": 350,
+      "price": 250,
+      "sourness": 7,
+      "peppercorn": 7,
+      "saturation": 7,
+      "rating": 4.0,
+      "review": 32,
+      "stars": 4
+    },
+    {
+      "id": 2,
+      "images": "",
+      "alt": "promotion",
+      "title": "Colombia Supremo",
+      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "oldPrice": 350,
+      "price": 250,
+      "sourness": 7,
+      "peppercorn": 7,
+      "saturation": 7,
+      "rating": 4.0,
+      "review": 32,
+      "stars": 4
+    },
+    {
+      "id": 3,
+      "images": "",
+      "alt": "promotion",
+      "title": "Colombia Supremo",
+      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "oldPrice": 350,
+      "price": 250,
+      "sourness": 7,
+      "peppercorn": 7,
+      "saturation": 7,
+      "rating": 4.0,
+      "review": 32,
+      "stars": 4
+    }
+  ]
+}
