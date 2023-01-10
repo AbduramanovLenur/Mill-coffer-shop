@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{369:function(n,t,c){"use strict";c.r(t);var e={name:"Product"},o=c(17),component=Object(o.a)(e,(function(){var n=this,t=n._self._c;return t("section",{class:n.b()},[t("div",{staticClass:"container"},[t("div",{class:n.b("inner")})])])}),[],!1,null,"bd2a9024",null);t.default=component.exports}}]);
