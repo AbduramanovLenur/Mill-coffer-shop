@@ -9,6 +9,17 @@ body {
   font-weight: var(--default-fw);
   line-height: var(--default-lh);
   color: var(--default-color);
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    background-color: #fff;
+  }
+
+/* ползунок скроллбара */
+  &::-webkit-scrollbar-thumb {
+      background-color: #F9B300;
+      border-radius: 9em;
+      box-shadow: inset 1px 1px 10px #f3faf7;
+  }
 }
 li {
   list-style: none;

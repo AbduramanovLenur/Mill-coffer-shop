@@ -8,6 +8,7 @@
       <Roasting />
     </div>
     <ArticleList />
+    <Mailing />
   </main>
 </template>
 

@@ -28,7 +28,7 @@ export default {
     gap: 20px 0;
     padding: 100px 0;
     @media (max-width: 1024px) {
-      padding: 50px;
+      padding: 50px 0;
     }
     @media (max-width: 800px) {
       flex-direction: column;

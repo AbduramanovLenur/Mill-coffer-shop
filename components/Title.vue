@@ -14,11 +14,11 @@ export default {
     },
     pxMargin: {
       type: Number,
-      default: () => ''
+      default: () => 0
     },
     maxWidth: {
       type: Number,
-      default: () => ''
+      default: () => 0
     }
   },
   computed: {
