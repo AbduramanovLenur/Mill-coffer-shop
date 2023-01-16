@@ -1,0 +1,261 @@
+<template>
+  <div :class="b('')">
+    <div :class="b('gram')">
+      {{ gram }} г.
+    </div>
+    <h3 :class="b('promo-title')">
+      Скидки
+    </h3>
+    <div :class="b('box')">
+      <div :class="b('picture')">
+        <img :src="images" :alt="alt">
+      </div>
+      <div :class="b('info')">
+        <Rating :class="b('rating')" :grade="stars" :maxStars="5" />
+        <div :class="b('statistics')">
+          <div :class="b('statistics-number')">
+            {{ rating }}.0
+          </div>
+          <div :class="b('statistics-review')">
+            ({{ review }} отзыва)
+          </div>
+        </div>
+        <Grains :class="b('grains')" :grains="grains" />
+        <h4 :class="b('title-static')">
+          Кислинка
+        </h4>
+        <Scale :class="b('sourness')" :scale="sourness" :maxScale="10" />
+        <h4 :class="b('title-static')">
+          Горчинка
+        </h4>
+        <Scale :class="b('bitterness')" :scale="peppercorn" :maxScale="10"/>
+        <h4 :class="b('title-static')">
+          Насыщенность
+        </h4>
+        <Scale :class="b('saturation')" :scale="peppercorn" :maxScale="10"/>
+      </div>
+    </div>
+    <h3 :class="b('title')">
+      {{ title }}
+    </h3>
+    <div :class="b('subtitle')">
+      {{ subtitle }}
+    </div>
+    <div :class="b('wrapper')">
+      <div :class="b('prices')">
+        <div :class="b('oldprice')">
+          {{ oldPrice }} ₽
+        </div>
+        <div :class="b('price')">
+          {{ price }} ₽
+        </div>
+      </div>
+      <button :class="b('button')">
+        В корзину
+      </button>
+    </div>
+    <img :class="b('promo-images')" src="@/assets/images/product/promo-images.png" alt="images">
+  </div>
+</template>
+
+<script>
+export default {
+  name: "PromoCart",
+  props: {
+    images: {
+      type: String,
+      default: () => ""
+    },
+    alt: {
+      type: String,
+      default: () => ""
+    },
+    title: {
+      type: String,
+      default: () => ""
+    },
+    subtitle: {
+      type: String,
+      default: () => ""
+    },
+    oldPrice: {
+      type: Number,
+      default: () => 0
+    },
+    price: {
+      type: Number,
+      default: () => 0
+    },
+    sourness: {
+      type: Number,
+      default: () => 0
+    },
+    peppercorn: {
+      type: Number,
+      default: () => 0
+    },
+    saturation: {
+      type: Number,
+      default: () => 0
+    },
+    rating: {
+      type: Number,
+      default: () => 0
+    },
+    review: {
+      type: Number,
+      default: () => 0
+    },
+    stars: {
+      type: Number,
+      default: () => 0
+    },
+    gram: {
+      type: Number,
+      default: () => 0
+    },
+    grains: {
+      type: Number,
+      default: () => 0
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.promo-cart {
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(146, 146, 146, 0.25);
+  border-radius: 20px;
+  max-width: 400px;
+  padding: 20px 35px 50px;
+  &__gram {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF7E1;
+    border: 1px solid #F9B300;
+    border-radius: 5px;
+    max-width: 132px;
+    width: 100%;
+    height: 33px;
+    margin-left: auto;
+  }
+  &__promo-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.16;
+    color: #F9B300;
+    margin-bottom: 20px;
+  }
+  &__box {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+  &__statistics {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 28px;
+    &-number {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    &-review {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.14;
+      color: #5B5B5B;
+    }
+  }
+  &__grains {
+    margin-bottom: 30px;
+  }
+  &__title {
+    &-static {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.16;
+      max-width: 100px;
+      margin-bottom: 10px;
+      color: #222222;
+    }
+  }
+  &__sourness {
+    margin-bottom: 15px;
+  }
+  &__bitterness {
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 1.24;
+    margin-bottom: 10px;
+    max-width: 230px;
+    color: #222222;
+  }
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.16;
+    max-width: 270px;
+    margin-bottom: 8px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+  }
+  &__oldprice {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.16;
+    color: #C6C6C6;
+    text-decoration: line-through;
+  }
+  &__price {
+    font-size: 35px;
+    line-height: 1.25;
+    font-weight: 900;
+    color: #222222;
+  }
+  &__button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-btn);
+    border-radius: 5px;
+    max-width: 178px;
+    width: 100%;
+    height: 48px;
+    padding: 13px;
+    color: #FFFFFF;
+    transition: 0.5s;
+  }
+  &__promo-images {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+  }
+}
+
+@media (hover: hover) {
+  .promo-cart {
+    &__button {
+      &:hover {
+        background-color: var(--hover-color-btn);
+      }
+    }
+  }
+}
+</style>

@@ -19,7 +19,11 @@ export default {
     if (Object.keys(store.getters['article-api/getArticleContent']).length === 0) {
       await store.dispatch('article-api/fetchArticle');
     }
-  },
+
+    if (store.getters['promo-api/getPromo'].length === 0) {
+      await store.dispatch('promo-api/fetchPromo');
+    }
+  }
 }
 </script>
 <style lang="scss">

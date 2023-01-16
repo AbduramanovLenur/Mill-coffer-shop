@@ -1,8 +1,7 @@
 {
-  "promo": [
-    {
+  "promo": [{
       "id": 1,
-      "images": "",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
       "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -11,13 +10,15 @@
       "sourness": 7,
       "peppercorn": 7,
       "saturation": 7,
-      "rating": 4.0,
+      "rating": 3.0,
       "review": 32,
-      "stars": 4
+      "stars": 3,
+      "gram": 250,
+      "grains": 5
     },
     {
       "id": 2,
-      "images": "",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
       "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -26,13 +27,66 @@
       "sourness": 7,
       "peppercorn": 7,
       "saturation": 7,
-      "rating": 4.0,
+      "rating": 5.0,
       "review": 32,
-      "stars": 4
+      "stars": 5,
+      "gram": 250,
+      "grains": 5
     },
     {
       "id": 3,
-      "images": "",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
+      "alt": "promotion",
+      "title": "Colombia Supremo",
+      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "oldPrice": 350,
+      "price": 250,
+      "sourness": 7,
+      "peppercorn": 7,
+      "saturation": 7,
+      "rating": 3.0,
+      "review": 32,
+      "stars": 3,
+      "gram": 250,
+      "grains": 5
+    },
+    {
+      "id": 4,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
+      "alt": "promotion",
+      "title": "Colombia Supremo",
+      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "oldPrice": 350,
+      "price": 250,
+      "sourness": 7,
+      "peppercorn": 7,
+      "saturation": 7,
+      "rating": 1.0,
+      "review": 32,
+      "stars": 1,
+      "gram": 250,
+      "grains": 5
+    },
+    {
+      "id": 5,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
+      "alt": "promotion",
+      "title": "Colombia Supremo",
+      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "oldPrice": 350,
+      "price": 250,
+      "sourness": 7,
+      "peppercorn": 7,
+      "saturation": 7,
+      "rating": 5.0,
+      "review": 32,
+      "stars": 5,
+      "gram": 250,
+      "grains": 5
+    },
+    {
+      "id": 6,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
       "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
@@ -43,7 +97,9 @@
       "saturation": 7,
       "rating": 4.0,
       "review": 32,
-      "stars": 4
+      "stars": 4,
+      "gram": 250,
+      "grains": 5
     }
   ]
 }

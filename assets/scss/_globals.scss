@@ -77,17 +77,21 @@ svg {
     cursor: pointer;
   }
 }
-.main {
-  flex: 1;
-  background-image: url("@/assets/images/body-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+// .main {
+//   flex: 1;
+//   background-image: url("@/assets/images/body-bg.png");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+// }
 .wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  // background-image: url("@/assets/images/body-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .container {
   max-width: 1690px;
