@@ -1,53 +1,53 @@
 <template>
   <div :class="b('')">
     <div :class="b('gram')">
-      {{ gram }} г.
+      {{ cart.gram }} г.
     </div>
     <h3 :class="b('promo-title')">
       Скидки
     </h3>
     <div :class="b('box')">
       <div :class="b('picture')">
-        <img :src="images" :alt="alt">
+        <img :src="cart.images" :alt="cart.alt">
       </div>
       <div :class="b('info')">
-        <Rating :class="b('rating')" :grade="stars" :maxStars="5" />
+        <Rating :class="b('rating')" :grade="cart.stars" :maxStars="5" />
         <div :class="b('statistics')">
           <div :class="b('statistics-number')">
-            {{ rating }}.0
+            {{ cart.rating }}.0
           </div>
           <div :class="b('statistics-review')">
-            ({{ review }} отзыва)
+            ({{ cart.review }} отзыва)
           </div>
         </div>
-        <Grains :class="b('grains')" :grains="grains" />
+        <Grains :class="b('grains')" :grains="cart.grains" />
         <h4 :class="b('title-static')">
           Кислинка
         </h4>
-        <Scale :class="b('sourness')" :scale="sourness" :maxScale="10" />
+        <Scale :class="b('sourness')" :scale="cart.sourness" :maxScale="10" />
         <h4 :class="b('title-static')">
           Горчинка
         </h4>
-        <Scale :class="b('bitterness')" :scale="peppercorn" :maxScale="10"/>
+        <Scale :class="b('bitterness')" :scale="cart.peppercorn" :maxScale="10"/>
         <h4 :class="b('title-static')">
           Насыщенность
         </h4>
-        <Scale :class="b('saturation')" :scale="peppercorn" :maxScale="10"/>
+        <Scale :class="b('saturation')" :scale="cart.peppercorn" :maxScale="10"/>
       </div>
     </div>
     <h3 :class="b('title')">
-      {{ title }}
+      {{ cart.title }}
     </h3>
     <div :class="b('subtitle')">
-      {{ subtitle }}
+      {{ cart.subtitle }}
     </div>
     <div :class="b('wrapper')">
       <div :class="b('prices')">
         <div :class="b('oldprice')">
-          {{ oldPrice }} ₽
+          {{ cart.oldPrice }} ₽
         </div>
         <div :class="b('price')">
-          {{ price }} ₽
+          {{ cart.price }} ₽
         </div>
       </div>
       <button :class="b('button')">
@@ -62,61 +62,9 @@
 export default {
   name: "PromoCart",
   props: {
-    images: {
-      type: String,
-      default: () => ""
-    },
-    alt: {
-      type: String,
-      default: () => ""
-    },
-    title: {
-      type: String,
-      default: () => ""
-    },
-    subtitle: {
-      type: String,
-      default: () => ""
-    },
-    oldPrice: {
-      type: Number,
-      default: () => 0
-    },
-    price: {
-      type: Number,
-      default: () => 0
-    },
-    sourness: {
-      type: Number,
-      default: () => 0
-    },
-    peppercorn: {
-      type: Number,
-      default: () => 0
-    },
-    saturation: {
-      type: Number,
-      default: () => 0
-    },
-    rating: {
-      type: Number,
-      default: () => 0
-    },
-    review: {
-      type: Number,
-      default: () => 0
-    },
-    stars: {
-      type: Number,
-      default: () => 0
-    },
-    gram: {
-      type: Number,
-      default: () => 0
-    },
-    grains: {
-      type: Number,
-      default: () => 0
+    cart: {
+      type: Object,
+      default: () => {}
     }
   }
 }
@@ -130,6 +78,7 @@ export default {
   border-radius: 20px;
   max-width: 400px;
   padding: 20px 35px 50px;
+
   &__gram {
     font-size: 18px;
     font-weight: 500;

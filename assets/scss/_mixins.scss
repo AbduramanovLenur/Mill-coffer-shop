@@ -1,0 +1,7 @@
+@mixin slider-shadow-fix($offset: 30px) {
+  &.swiper {
+    width: calc(100% + $offset * 2);
+    margin: calc($offset * -1);
+    padding: $offset;
+  }
+}

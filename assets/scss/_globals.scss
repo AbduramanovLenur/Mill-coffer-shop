@@ -100,3 +100,6 @@ svg {
   padding-right: var(--grid-padding);
   width: 100%;
 }
+.swiper {
+  max-width: calc(100vw - var(--grid-padding) * 2);
+}
