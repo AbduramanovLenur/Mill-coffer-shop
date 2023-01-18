@@ -78,7 +78,12 @@ export default {
   border-radius: 20px;
   max-width: 400px;
   padding: 20px 35px 50px;
-
+  @media (max-width: 1200px) {
+    padding: 25px;
+  }
+  @media (max-width: 480px) {
+    padding: 15px 20px;
+  }
   &__gram {
     font-size: 18px;
     font-weight: 500;
@@ -161,6 +166,16 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     gap: 20px;
+    @media (max-width: 384px) {
+      align-items: center;
+    }
+  }
+  &__prices {
+    @media (max-width: 384px) {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
   }
   &__oldprice {
     font-size: 25px;
@@ -168,12 +183,18 @@ export default {
     line-height: 1.16;
     color: #C6C6C6;
     text-decoration: line-through;
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
   }
   &__price {
     font-size: 35px;
     line-height: 1.25;
     font-weight: 900;
     color: #222222;
+    @media (max-width: 480px) {
+      font-size: 30px;
+    }
   }
   &__button {
     font-size: 18px;

@@ -44,7 +44,6 @@ input {
   color: inherit;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0;
   }
@@ -77,13 +76,14 @@ svg {
     cursor: pointer;
   }
 }
-// .main {
-//   flex: 1;
-//   background-image: url("@/assets/images/body-bg.png");
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-// }
+.main {
+  flex: 1;
+  // background-image: url("@/assets/images/body-bg.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  overflow: hidden;
+}
 .wrapper {
   display: flex;
   min-height: 100vh;
@@ -92,6 +92,7 @@ svg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 .container {
   max-width: 1690px;

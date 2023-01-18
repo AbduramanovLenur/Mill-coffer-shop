@@ -47,7 +47,7 @@ export default {
     align-items: center;
     margin-bottom: 60px;
     gap: 50px;
-    @media (max-width: 480px) {
+    @media (max-width: 540px) {
       flex-direction: column;
       gap: 0;
     }
