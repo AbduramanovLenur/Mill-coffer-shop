@@ -3,7 +3,7 @@
     <div :class="b('gram')">
       {{ cart.gram }} г.
     </div>
-    <h3 :class="b('promo-title')">
+    <h3 :class="b('product-title')">
       Скидки
     </h3>
     <div :class="b('box')">
@@ -54,13 +54,13 @@
         В корзину
       </button>
     </div>
-    <img :class="b('promo-images')" src="@/assets/images/product/promo-images.png" alt="images">
+    <img :class="b('product-images')" src="@/assets/images/product/promo-images.png" alt="images">
   </div>
 </template>
 
 <script>
 export default {
-  name: "PromoCart",
+  name: "ProductCart",
   props: {
     cart: {
       type: Object,
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.promo-cart {
+.product-cart {
   position: relative;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 20px rgba(146, 146, 146, 0.25);
@@ -94,7 +94,7 @@ export default {
     height: 33px;
     margin-left: auto;
   }
-  &__promo-title {
+  &__product-title {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.16;
@@ -160,7 +160,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 50px;
+    gap: 20px;
   }
   &__oldprice {
     font-size: 25px;
@@ -191,7 +191,7 @@ export default {
     color: #FFFFFF;
     transition: 0.5s;
   }
-  &__promo-images {
+  &__product-images {
     position: absolute;
     top: -40px;
     left: 10px;

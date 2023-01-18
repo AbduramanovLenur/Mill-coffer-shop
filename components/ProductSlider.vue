@@ -1,16 +1,17 @@
 <template>
-  <div class="slider-promo">
-    <div class="promo-slider">
-      <div class="swiper promo-swiper" ref="swiper">
-        <div class="swiper-wrapper promo-wrapper">
-          <div class="swiper-slide promo-slide" v-for="cart in promo" :key="cart.id">
-            <PromoCart :cart="cart" />
+  <div class="slider-product">
+    <div class="product-slider">
+      <div class="swiper product-swiper" ref="swiper">
+        <div class="swiper-wrapper product-wrapper">
+          <div class="swiper-slide product-slide" v-for="cart in promo" :key="cart.id">
+            <ProductCart :cart="cart" />
           </div>
         </div>
       </div>
+      <div class="swiper-pagination product-pagination"></div>
     </div>
-    <div ref="prev" class="swiper-button-next promo-button-next"></div>
-    <div ref="next" class="swiper-button-prev promo-button-prev"></div>
+    <div ref="prev" class="swiper-button-next product-button-next"></div>
+    <div ref="next" class="swiper-button-prev product-button-prev"></div>
   </div>
 </template>
 
@@ -34,7 +35,14 @@ export default {
         prevEl: '.swiper-button-prev',
       },
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 25,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+
+      }
     });
   },
   setup() {
@@ -51,34 +59,37 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/_mixins.scss";
 
-.slider-promo {
+.slider-product {
   position: relative;
 }
-.promo {
+
+.product {
   &-swiper {
-    @include slider-shadow-fix(20px);
+    @include slider-shadow-fix(10px);
   }
   &-slider {
     --slideWidth: 400px;
-    --slideGap: 20px;
+    --slideGap: 25px;
     --slideAmount: 3;
 
     width: 100%;
     max-width: calc((var(--slideWidth) * var(--slideAmount)) + (var(--slideGap) * (var(--slideAmount) - 1)));
-    overflow: hidden;
     margin: 0 auto;
   }
-
   &-wrapper {
     padding: 40px 0;
+    max-width: 1240px;
   }
-
   &-slide {
     max-width: 400px;
   }
-
+  &-pagination {
+    display: none;
+    @media (max-width: 1440px) {
+      display: block;
+    }
+  }
   &-button {
-
     &-prev,
     &-next {
       --width: 70px;
@@ -86,19 +97,39 @@ export default {
 
       width: var(--width);
       height: var(--heigth);
-
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       &::after {
         display: none;
       }
-    }
 
+      @media (max-width: 1536px) {
+        --width: 50px;
+        --heigth: 50px;
+      }
+      @media (max-width: 1440px) {
+        display: none;
+      }
+    }
     &-prev {
       background-image: url("@/assets/images/product/prev.png");
+      left: 80px;
     }
-
     &-next {
       background-image: url("@/assets/images/product/next.png");
+      right: 80px;
     }
   }
+}
+::v-deep .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #00ffff;
+}
+::v-deep .swiper-pagination-bullet-active {
+  background: #f00;
+  width: 15px;
+  height: 15px;
 }
 </style>
