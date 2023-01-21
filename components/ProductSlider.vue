@@ -129,11 +129,9 @@ export default {
     }
     &-prev {
       background-image: url("@/assets/images/product/prev.png");
-      // left: 80px;
     }
     &-next {
       background-image: url("@/assets/images/product/next.png");
-      // right: 80px;
     }
   }
 }

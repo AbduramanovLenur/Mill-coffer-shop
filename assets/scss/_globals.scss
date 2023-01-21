@@ -78,20 +78,15 @@ svg {
 }
 .main {
   flex: 1;
-  // background-image: url("@/assets/images/body-bg.png");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
-  overflow: hidden;
 }
 .wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  // background-image: url("@/assets/images/body-bg.png");
+  background-image: url("@/assets/images/body-bg.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: contain;
   overflow: hidden;
 }
 .container {

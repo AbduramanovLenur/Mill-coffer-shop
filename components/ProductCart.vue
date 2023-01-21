@@ -220,7 +220,7 @@ export default {
 }
 
 @media (hover: hover) {
-  .promo-cart {
+  .product-cart {
     &__button {
       &:hover {
         background-color: var(--hover-color-btn);

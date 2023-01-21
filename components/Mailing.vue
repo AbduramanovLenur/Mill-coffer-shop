@@ -1,5 +1,5 @@
 <template>
-  <section :class="b()">
+  <section :class="b()" id="contact">
     <div class="container">
       <div :class="b('inner')" data-aos="fade-right" data-aos-duration="1000">
         <Title :maxWidth="800" :pxMargin="50">
@@ -19,7 +19,7 @@
         </form>
       </div>
     </div>
-    <img :class="b('coffee')" src="@/assets/images/mailing/coffee.png" alt="coffee" data-aos="fade-left" data-aos-duration="1000">
+    <img :class="b('coffee')" src="@/assets/images/mailing/cof.png" alt="coffee" data-aos="fade-left" data-aos-duration="1000">
   </section>
 </template>
 
@@ -68,8 +68,6 @@ export default {
     @media (max-width: 800px) {
       font-size: 20px;
       height: 55px;
-    }
-    @media (max-width: 384px) {
       padding: 10px 30px;
     }
   }

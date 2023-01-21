@@ -114,6 +114,7 @@ export default {
     width: 100%;
     height: 80px;
     padding: 20px;
+    transition: 0.5s;
     @media (max-width: 480px) {
       font-size: 25px;
     }
@@ -133,6 +134,15 @@ export default {
     }
     @media (max-width: 864px) {
       display: none;
+    }
+  }
+}
+@media (hover: hover) {
+  .intro {
+    &__catalog {
+      &:hover {
+        background-color: var(--hover-color-btn);
+      }
     }
   }
 }

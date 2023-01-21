@@ -1,7 +1,7 @@
 <template>
-  <ul :class="b()">
+  <ul :class="b('')">
     <li :class="b('item')" v-for="item in menu" :key="item.id">
-      <a :class="b('link')" :href="item.to" v-smooth-scroll="{ duration: 1000 }">
+      <a :class="b('link')" :href="item.to" v-smooth-scroll="{ duration: 1000 }" @click="activeClass">
         {{ item.title }}
       </a>
     </li>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "Menu",
+  name: "SidebarMenu",
   data: () => {
     return {
       menu: [
@@ -31,31 +31,22 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    activeClass() {
+      this.$store.dispatch('addActiveClass');
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.menu {
+.sidebar-menu {
   display: flex;
-  align-items: center;
-  gap: 100px;
-  @media (max-width: 1152px) {
-    gap: 50px;
-  }
-  @media (max-width: 540px) {
-    gap: 20px;
-    flex-direction: column;
-    align-items: start;
-  }
+  flex-direction: column;
+  gap: 20px;
   &__link {
-    line-height: 1.16;
-    @media (max-width: 1152px) {
-      font-size: 20px;
-    }
-    @media (max-width: 540px) {
-      font-size: 18px;
-    }
+    max-width: 300px;
   }
 }
 </style>

@@ -7,16 +7,11 @@
             <img src="@/assets/images/logo.png" alt="logo">
           </nuxt-link>
         </div>
-        <form :class="b('form')">
-          <input :class="b('input')" type="text" placeholder="Поиск по товарам">
-          <span :class="b('search')">
-            <Icon name="search" />
-          </span>
-        </form>
-        <span :class="b('search-btn')">
-          <Icon name="search-btn"/>
-        </span>
+        <Menu :class="b('menu')"/>
         <div :class="b('btns')">
+          <span :class="b('search-btn')" @click="openSearchModal">
+            <Icon name="search-btn"/>
+          </span>
           <nuxt-link :class="b('basket')" to="/basket">
             <Icon name="basket" />
           </nuxt-link>
@@ -24,6 +19,7 @@
             <Icon name="account" />
           </nuxt-link>
         </div>
+        <Burger :class="b('burger')"/>
       </div>
     </div>
   </header>
@@ -36,6 +32,12 @@ export default {
     return {
       isActive: false
     }
+  },
+  methods: {
+    openSearchModal() {
+      this.$store.dispatch('search/isActiveSearch');
+      document.body.style.overflowY = "hidden";
+    }
   }
 }
 </script>
@@ -43,14 +45,22 @@ export default {
 <style lang="scss" scoped>
 .header {
   box-shadow: 0px 5px 20px rgba(157, 157, 157, 0.25);
-  z-index: 10;
   &__inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 22px 0;
+    @media (max-width: 960px) {
+      gap: 20px;
+    }
+    @media (max-width: 480px) {
+      gap: 5px;
+    }
   }
   &__logo {
-    margin-right: auto;
+    @media (max-width: 960px) {
+      margin-right: auto;
+    }
   }
   &__form {
     position: relative;
@@ -83,29 +93,9 @@ export default {
       outline: none;
     }
   }
-  &__search {
-    display: flex;
-    position: absolute;
-    top: 14px;
-    left: 30px;
-    @media (max-width: 640px) {
-      top: 17px;
-      left: 15px;
-      ::v-deep .icon-search svg {
-        width: 25px;
-        height: 25px;
-      }
-    }
-  }
-  &__search-btn {
-    display: none;
-    margin-left: 35px;
-    @media (max-width: 540px) {
-      display: flex;
-      ::v-deep .icon-search-btn svg {
-        width: 25px;
-        height: 25px;
-      }
+  &__menu {
+    @media (max-width: 960px) {
+      display: none !important;
     }
   }
   &__btns {
@@ -114,6 +104,30 @@ export default {
     margin-left: 25px;
     @media (max-width: 640px) {
       gap: 20px;
+    }
+  }
+  ::v-deep &__search-btn {
+    @media (max-width: 480px) {
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  ::v-deep &__basket {
+    @media (max-width: 480px) {
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  ::v-deep &__account {
+    @media (max-width: 480px) {
+      svg {
+        width: 25px;
+        height: 25px;
+      }
     }
   }
 }

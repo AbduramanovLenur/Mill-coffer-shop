@@ -32,6 +32,7 @@ export default {
   plugins: [
     "@/plugins/aos.client.js",
     "@/plugins/bem-classnames.js",
+    "@/plugins/scroll-smooth.js"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

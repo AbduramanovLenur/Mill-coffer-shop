@@ -1,5 +1,5 @@
 <template>
-  <section :class="b()">
+  <section :class="b()" id="catalog">
     <div class="container">
       <div :class="b('inner')">
         <Title :class="b('title')" :pxMargin="83" :maxWidth="670">

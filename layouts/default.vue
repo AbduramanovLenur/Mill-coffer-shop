@@ -3,6 +3,8 @@
     <Header />
     <nuxt />
     <Footer />
+    <Search />
+    <Sidebar />
   </div>
 </template>
 
