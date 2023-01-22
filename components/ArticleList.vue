@@ -1,5 +1,5 @@
 <template>
-  <section :class="b()" id="blog">
+  <section :class="b()">
     <div class="container">
       <div :class="b('inner')">
         <div :class="b('top')">

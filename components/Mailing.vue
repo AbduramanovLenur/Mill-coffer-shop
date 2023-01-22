@@ -1,5 +1,5 @@
 <template>
-  <section :class="b()" id="contact">
+  <section :class="b()">
     <div class="container">
       <div :class="b('inner')" data-aos="fade-right" data-aos-duration="1000">
         <Title :maxWidth="800" :pxMargin="50">

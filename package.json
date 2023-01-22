@@ -17,7 +17,6 @@
     "vue": "^2.7.10",
     "vue-bem-cn": "^1.1.1",
     "vue-server-renderer": "^2.7.10",
-    "vue-smooth-scroll": "^1.0.13",
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {

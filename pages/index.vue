@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main class="main main-bg">
     <Intro />
     <Catalog />
     <Product />
