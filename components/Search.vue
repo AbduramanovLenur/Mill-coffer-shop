@@ -32,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 .search {
   position: fixed;
-  top: -100%;
+  top: -130%;
   left: 0;
   width: 100%;
   height: 100vh;
