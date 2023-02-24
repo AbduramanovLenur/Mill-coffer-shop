@@ -16,12 +16,17 @@
 export default {
   name: 'IndexPage',
   async asyncData({ store }) {
-    if (Object.keys(store.getters['article-api/getArticleContent']).length === 0) {
-      await store.dispatch('article-api/fetchArticle');
+    const fetchApi = [
+      { url: 'https://mill-cart-promotion-default-rtdb.firebaseio.com/promo.json', nameSetFunction: 'SET_PROMO' },
+      { url: 'https://news-content-6b2d0-default-rtdb.firebaseio.com/news.json', nameSetFunction: 'SET_ARTICLE' }
+    ];
+
+    if (store.getters['api/getPromo'].length === 0) {
+      await store.dispatch('api/fetch', fetchApi[0]);
     }
 
-    if (store.getters['promo-api/getPromo'].length === 0) {
-      await store.dispatch('promo-api/fetchPromo');
+    if (Object.keys(store.getters['api/getArticleContent']).length === 0) {
+      await store.dispatch('api/fetch', fetchApi[1]);
     }
   }
 }
@@ -32,6 +37,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @media (max-width: 1152px) {
     background-image: none;
   }

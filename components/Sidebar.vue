@@ -26,7 +26,7 @@ export default {
   transition: 0.5s;
   height: 100vh;
   width: 100%;
-  z-index: 50;
+  z-index: 100;
   &.isActive {
     left: 0;
   }

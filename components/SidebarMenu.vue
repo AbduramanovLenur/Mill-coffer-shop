@@ -1,9 +1,9 @@
 <template>
   <ul :class="b('')">
     <li :class="b('item')" v-for="item in menu" :key="item.id">
-      <a :class="b('link')" :href="item.to" v-smooth-scroll="{ duration: 1000 }" @click="activeClass">
+      <nuxt-link :to="item.to" :class="b('link')" @click="activeClass">
         {{ item.title }}
-      </a>
+      </nuxt-link>
     </li>
   </ul>
 </template>
@@ -17,17 +17,17 @@ export default {
         {
           id: 1,
           title: "Каталог товаров",
-          to: "#catalog"
+          to: "catalog"
         },
         {
           id: 2,
           title: "Блог",
-          to: "#blog"
+          to: "blog"
         },
         {
           id: 3,
           title: "Контакты",
-          to: "#contact"
+          to: "contact"
         }
       ]
     }

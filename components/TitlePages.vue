@@ -1,17 +1,13 @@
 <template>
-  <h2 :class="b()" :style="cssVars">
+  <h2 :class="b('')" :style="cssVars">
     <slot></slot>
   </h2>
 </template>
 
 <script>
 export default {
-  name: "Title",
+  name: "TitlePages",
   props: {
-    fzColor: {
-      type: String,
-      default: () => '#000'
-    },
     pxMargin: {
       type: Number,
       default: () => 0
@@ -19,12 +15,11 @@ export default {
     maxWidth: {
       type: Number,
       default: () => 0
-    }
+    },
   },
   computed: {
     cssVars() {
       return {
-        '--fz-color': `#${this.fzColor}`,
         '--px-margin': `${this.pxMargin}px`,
         '--max-width': `${this.maxWidth}px`
       }
@@ -34,23 +29,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title {
-  font-size: var(--title-fz);
+.title-pages {
+  font-size: 70px;
   font-weight: 900;
   line-height: 1.24;
-  color: var(--fz-color);
+  color: #FFFFFF;
   margin-bottom: var(--px-margin);
   max-width: var(--max-width);
-  @media (max-width: 960px) {
-    font-size: 40px;
-    margin-bottom: 50px;
+  @media (max-width: 768px) {
+    font-size: 50px;
   }
   @media (max-width: 600px) {
-    font-size: 25px;
-    margin-bottom: 30px;
+    --px-margin: 50px !important;
   }
-  @media (max-width: 540px) {
-    text-align: center;
+  @media (max-width: 480px) {
+    --px-margin: 30px !important;
+    font-size: 30px;
   }
 }
 </style>

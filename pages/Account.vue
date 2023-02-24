@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-
+    <Mailing />
   </main>
 </template>
 

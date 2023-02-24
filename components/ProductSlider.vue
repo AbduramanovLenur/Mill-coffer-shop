@@ -24,7 +24,7 @@ export default {
   name: "ProductSlider",
   computed: {
     promo() {
-      return this.$store.getters['promo-api/getPromo'];
+      return this.$store.getters['api/getPromo'];
     }
   },
   async mounted() {

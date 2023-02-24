@@ -1,0 +1,174 @@
+{
+  "product-top": [
+    {
+      "id": 1,
+      "title": "Цикорий и корень цикория",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 2,
+      "title": "Ячменные напитки",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 3,
+      "title": "Напитки для здоровья",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 4,
+      "title": "Протеиновые смеси",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 5,
+      "title": "Протеиновые смеси",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 6,
+      "title": "Толокняные каши",
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    }
+  ],
+  "product-bottom": [
+    {
+      "id": 1,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "350",
+      "rating": 3.0,
+      "gram": 100,
+      "review": 52,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 2,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "220",
+      "rating": 5.0,
+      "gram": 100,
+      "review": 12,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 3,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "550",
+      "rating": 3.0,
+      "gram": 100,
+      "review": 22,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 4,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "550",
+      "rating": 5.0,
+      "gram": 100,
+      "review": 82,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 5,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "150",
+      "rating": 3.0,
+      "gram": 100,
+      "review": 2,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 6,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "300",
+      "rating": 3.0,
+      "gram": 100,
+      "review": 22,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 7,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "550",
+      "rating": 5.0,
+      "gram": 100,
+      "review": 22,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 8,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "150",
+      "rating": 3.0,
+      "gram": 100,
+      "review": 22,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 9,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "210",
+      "rating": 3.0,
+      "gram": 100,
+      "review": 62,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 10,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "760",
+      "rating": 5.0,
+      "gram": 100,
+      "review": 92,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 11,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "330",
+      "rating": 3.0,
+      "gram": 100,
+      "review": 25,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    },
+    {
+      "id": 12,
+      "title": "Наименование товара",
+      "subtitle": "Черный чай",
+      "price": "250",
+      "rating": 4.0,
+      "gram": 100,
+      "review": 32,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
+      "alt": "product"
+    }
+  ]
+}

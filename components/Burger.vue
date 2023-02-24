@@ -33,7 +33,7 @@ export default {
   cursor: pointer;
   overflow: hidden;
   transition: 0.5s;
-  z-index: 100;
+  z-index: 101;
   flex-shrink: 0;
   span {
     position: absolute;

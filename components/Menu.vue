@@ -50,11 +50,35 @@ export default {
   }
   &__link {
     line-height: 1.16;
+    padding-bottom: 4px;
+    position: relative;
+    transition: 0.5s;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      height: 2px;
+      background: var(--yellow);
+      transition: 0.4s ease-out;
+    }
     @media (max-width: 1152px) {
       font-size: 20px;
     }
     @media (max-width: 540px) {
       font-size: 18px;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .menu {
+    &__link {
+      &:hover::after {
+          left: 0;
+          width: 100%;
+      }
     }
   }
 }

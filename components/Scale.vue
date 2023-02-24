@@ -1,9 +1,9 @@
 <template>
   <ul :class="b('')">
-    <li :class="b('item')" v-for="item in scale" :key="item">
+    <li :class="b('item')" v-for="item in scale" :key="'scale' + item">
       <div :class="b('circle-orange')"></div>
     </li>
-    <li :class="b('item')" v-for="item in maxScale - scale" :key="item">
+    <li :class="b('item')" v-for="item in maxScale - scale" :key="'maxScale' + item">
       <div :class="b('circle-gray')"></div>
     </li>
   </ul>

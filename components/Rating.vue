@@ -1,9 +1,9 @@
 <template>
   <ul :class="b('')">
-    <li :class="b('star')" v-for="star in grade" :key="star">
+    <li :class="b('star')" v-for="star in grade" :key="'grade' + star">
       <Icon name="star" />
     </li>
-    <li :class="b('empty-star')" v-for="star in maxStars - grade" :key="star">
+    <li :class="b('empty-star')" v-for="star in maxStars - grade" :key="'maxStars' + star">
       <Icon name="empty-star" />
     </li>
   </ul>
