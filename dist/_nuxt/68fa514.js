@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{452:function(n,t,e){"use strict";e.r(t);var c={name:"Basket"},l=e(8),component=Object(l.a)(c,(function(){return(0,this._self._c)("main",{staticClass:"main"})}),[],!1,null,"649972f8",null);t.default=component.exports}}]);
