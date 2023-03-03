@@ -4,7 +4,10 @@
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
-      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "subtitle": {
+        "ru": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+        "en": "Freshly roasted coffee - product description, taste, aroma"
+      },
       "oldPrice": 350,
       "price": 250,
       "sourness": 7,
@@ -21,7 +24,10 @@
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
-      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "subtitle": {
+        "ru": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+        "en": "Freshly roasted coffee - product description, taste, aroma"
+      },
       "oldPrice": 350,
       "price": 250,
       "sourness": 7,
@@ -38,7 +44,10 @@
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
-      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "subtitle": {
+        "ru": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+        "en": "Freshly roasted coffee - product description, taste, aroma"
+      },
       "oldPrice": 350,
       "price": 250,
       "sourness": 7,
@@ -55,7 +64,10 @@
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
-      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "subtitle": {
+        "ru": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+        "en": "Freshly roasted coffee - product description, taste, aroma"
+      },
       "oldPrice": 350,
       "price": 250,
       "sourness": 7,
@@ -72,7 +84,10 @@
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
-      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "subtitle": {
+        "ru": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+        "en": "Freshly roasted coffee - product description, taste, aroma"
+      },
       "oldPrice": 350,
       "price": 250,
       "sourness": 7,
@@ -89,7 +104,10 @@
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=c4f3acf6-8347-42c6-bb33-ce6b7673518f",
       "alt": "promotion",
       "title": "Colombia Supremo",
-      "subtitle": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+      "subtitle": {
+        "ru": "Свежеобжаренный кофе - описание товара, вкус, аромат",
+        "en": "Freshly roasted coffee - product description, taste, aroma"
+      },
       "oldPrice": 350,
       "price": 250,
       "sourness": 7,

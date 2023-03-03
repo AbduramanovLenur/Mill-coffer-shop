@@ -1,10 +1,10 @@
 <template>
   <div :class="b('')">
     <div :class="b('gram')">
-      {{ cart.gram }} г.
+      {{ cart.gram }} {{ $t('gramUnit') }}
     </div>
     <h3 :class="b('product-title')">
-      Скидки
+      {{ $t('discountsTitle') }}
     </h3>
     <div :class="b('box')">
       <div :class="b('picture')">
@@ -17,20 +17,20 @@
             {{ cart.rating }}.0
           </div>
           <div :class="b('statistics-review')">
-            ({{ cart.review }} отзыва)
+            ({{ cart.review }} {{ $t('reviewText') }})
           </div>
         </div>
         <Grains :class="b('grains')" :grains="cart.grains" />
         <h4 :class="b('title-static')">
-          Кислинка
+          {{ $t('sourTitle') }}
         </h4>
         <Scale :class="b('sourness')" :scale="cart.sourness" :maxScale="10" />
         <h4 :class="b('title-static')">
-          Горчинка
+          {{ $t('bitternessTitle') }}
         </h4>
         <Scale :class="b('bitterness')" :scale="cart.peppercorn" :maxScale="10"/>
         <h4 :class="b('title-static')">
-          Насыщенность
+          {{ $t('saturationTitle') }}
         </h4>
         <Scale :class="b('saturation')" :scale="cart.peppercorn" :maxScale="10"/>
       </div>
@@ -39,7 +39,7 @@
       {{ cart.title }}
     </h3>
     <div :class="b('subtitle')">
-      {{ cart.subtitle }}
+      {{ cart.subtitle[$i18n.locale] }}
     </div>
     <div :class="b('wrapper')">
       <div :class="b('prices')">
@@ -51,7 +51,7 @@
         </div>
       </div>
       <button :class="b('button')">
-        В корзину
+        {{ $t('cartBtn') }}
       </button>
     </div>
     <img :class="b('product-images')" src="@/assets/images/product/promo-images.png" alt="images">

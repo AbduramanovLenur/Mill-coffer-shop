@@ -46,7 +46,28 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      '@nuxtjs/i18n',
+      {
+        locales: [
+          {
+            name: 'Ru',
+            code: 'ru',
+            file: 'ru.json',
+          },
+          {
+            name: 'En',
+            code: 'en',
+            file: 'en.json',
+          },
+        ],
+        defaultLocale: 'ru',
+        langDir: 'locales/',
+        lazy: true,
+        detectBrowserLanguage: false
+      }
+    ]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

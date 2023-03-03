@@ -13,12 +13,10 @@ body {
   &::-webkit-scrollbar {
     background-color: #fff;
   }
-
-/* ползунок скроллбара */
   &::-webkit-scrollbar-thumb {
-      background-color: #F9B300;
-      border-radius: 9em;
-      box-shadow: inset 1px 1px 10px #f3faf7;
+    background-color: #f9b300;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
   }
 }
 li {
@@ -103,7 +101,7 @@ svg {
   background-size: contain;
 }
 .container {
-  max-width: 1690px;
+  max-width: var(--max-width-container);
   margin: 0 auto;
   padding-left: var(--grid-padding);
   padding-right: var(--grid-padding);
@@ -111,4 +109,72 @@ svg {
 }
 .swiper {
   max-width: calc(100vw - var(--grid-padding) * 2);
+}
+.product {
+  &-enter-active,
+  &-leave-active {
+    transition: all 0.5s ease;
+  }
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+.overlay {
+  background-image: url('@/assets/images/decor.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.grid--four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--grid-product-gap-inline);
+  grid-row-gap: var(--grid-product-gap-block);
+  @media (max-width: 1350px) {
+    grid-template-columns: repeat(3, 1fr);
+    --grid-product-gap-block: 30px;
+  }
+  @media (max-width: 864px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.grid-catalog {
+  display: grid;
+  grid-column-gap: var(--grid-catalog-gap-inline);
+  grid-row-gap: var(--grid-catalog-gap-block);
+  margin-bottom: var(--catalog-margin-bottom);
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  @media (max-width: 540px) {
+    grid-template-columns: repeat(1, 1fr) !important;
+    --grid-catalog-gap-block: 20px;
+    --catalog-margin-bottom: 30px;
+  }
+  &--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &--four {
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 1350px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+.decor--bg {
+  background-image: url("@/assets/images/bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.catalog-block--padding {
+  padding-top: var(--catalog-padding-top);
+  padding-bottom: var(--catalog-padding-bottom);
+  @media (max-width: 480px) {
+    --catalog-padding-top: 20px;
+    --catalog-padding-bottom: 60px;
+  }
 }

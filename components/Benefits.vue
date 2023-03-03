@@ -9,7 +9,7 @@
         </div>
         <div :class="b('box')">
           <Title :class="b('title')" :pxMargin="80" :maxWidth="585">
-            Почему стоит работать именно с нами?
+            {{ $t('working') }}
           </Title>
           <ul :class="b('list')">
             <li :class="b('item')" v-for="item in benefits" :key="item.id" data-aos="flip-up" data-aos-duration="1000">
@@ -19,10 +19,10 @@
                 </div>
                 <div :class="b('content')">
                   <h3 :class="b('content-title')">
-                    {{ item.title }}
+                    {{ item.title[$i18n.locale] }}
                   </h3>
                   <div :class="b('content-text')">
-                    {{ item.text }}
+                    {{ item.text[$i18n.locale] }}
                   </div>
                 </div>
               </div>
@@ -44,20 +44,38 @@ export default {
         {
           id: 1,
           svg: "benefits-1",
-          title: "Всегда свежая обжарка",
-          text: "Подбор степени обжарки под каждый сорт кофе. Всегда свежая обжарка"
+          title: {
+              ru: "Всегда свежая обжарка",
+              en: "Always fresh roasted"
+          },
+          text: {
+            ru: "Подбор степени обжарки под каждый сорт кофе. Всегда свежая обжарка.",
+            en: "Selection of the degree of roasting for each type of coffee. Always fresh roasted."
+          }
         },
         {
           id: 2,
           svg: "benefits-2",
-          title: "Лучшие цены на продукцию",
-          text: "Благодаря крупным объемам производства мы даем лучшие цены на нашу продукцию"
+          title: {
+            ru: "Лучшие цены на продукцию",
+            en: "The best prices for products"
+          },
+          text: {
+            ru: "Благодаря крупным объемам производства мы даем лучшие цены на нашу продукцию.",
+            en: "Due to the large volumes of production, we give the best prices for our products."
+          }
         },
         {
           id: 3,
           svg: "benefits-3",
-          title: "Консультации 24/7",
-          text: "Наши специалисты готовы всегда помочь и подсказать вам с выбором кофе или другой продукции."
+          title: {
+            ru: "Консультации 24/7",
+            en: "Consultations 24/7"
+          },
+          text: {
+            ru: "Наши специалисты готовы всегда помочь и подсказать вам с выбором кофе или другой продукции.",
+            en: "Our specialists are always ready to help and advise you with the choice of coffee or other products."
+          }
         }
       ]
     }

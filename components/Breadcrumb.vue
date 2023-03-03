@@ -2,7 +2,7 @@
   <ul :class="b('list')" :style="cssVars">
     <li :class="b('item')" v-for="item in breadcrumbs" :key="item.id">
       <nuxt-link :class="b('link')" :to="item.link">
-        {{ item.text }}
+        {{ item.text[$i18n.locale] }}
       </nuxt-link>
     </li>
   </ul>
@@ -20,11 +20,16 @@ export default {
       type: Number,
       default: () => 0
     },
+    color: {
+      type: String,
+      default: () => ''
+    }
   },
   computed: {
     cssVars() {
       return {
-        '--px-margin': `${this.pxMargin}px`
+        '--px-margin': `${this.pxMargin}px`,
+        '--color': `#${this.color}`
       }
     }
   }
@@ -58,7 +63,7 @@ export default {
         content: ">";
         font-size: 18px;
         font-weight: 500;
-        color: #fff;
+        color: var(--color);
         margin-right: 5px;
         margin-left: 5px;
       }
@@ -67,7 +72,7 @@ export default {
   &__link {
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color: var(--color);
   }
 }
 </style>

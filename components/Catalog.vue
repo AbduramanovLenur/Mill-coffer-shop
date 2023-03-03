@@ -3,7 +3,7 @@
     <div class="container">
       <div :class="b('inner')">
         <Title :class="b('title')" :pxMargin="83" :maxWidth="670">
-          Каталоги нашей продукции
+          {{ $t('catalogTitle') }}
         </Title>
         <ul :class="b('list')">
           <CatalogItem v-for="item in products" :key="item.id" :cart="item"/>
@@ -21,34 +21,42 @@ export default {
       products: [
         {
           id: 1,
-          title: "Свежеобжаренный кофе",
+          title: {
+            ru: "Свежеобжаренный кофе",
+            en: "Freshly roasted coffee"
+          },
           img: "catalog-1.png",
           alt: "catalog",
-          button: "Купить",
-          link: ""
+          link: "Coffee"
         },
         {
           id: 2,
-          title: "Чай и кофейные напитки",
+          title: {
+            ru: "Чай и кофейные напитки",
+            en: "Tea and coffee drinks"
+          },
           img: "catalog-2.png",
           alt: "catalog",
-          button: "Купить",
-          link: ""
+          link: "Tea"
         },
         {
           id: 3,
-          title: "Продукция для вендинга",
+          title: {
+            ru: "Продукция для вендинга",
+            en: "Products for vending"
+          },
           img: "catalog-3.png",
           alt: "catalog",
-          button: "Купить",
-          link: ""
+          link: "Vending"
         },
         {
           id: 4,
-          title: "Здоровое питание",
+          title: {
+            ru: "Здоровое питание",
+            en: "Healthy food"
+          },
           img: "catalog-4.png",
           alt: "catalog",
-          button: "Купить",
           link: "Health"
         }
       ]

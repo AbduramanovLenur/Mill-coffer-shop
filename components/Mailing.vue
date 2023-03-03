@@ -1,25 +1,25 @@
 <template>
   <section :class="b()">
     <div class="container">
-      <div :class="b('inner')" data-aos="fade-right" data-aos-duration="1000">
+      <div :class="b('inner')">
         <Title :maxWidth="800" :pxMargin="50">
-          Подписка на новости и рассылку
+          {{ $t('subscribeTitle') }}
         </Title>
         <p :class="b('text')">
-          Подпишитесь на нашу рассылку прямо сейчас и будьте в курсе новых поставок, скидок и эксклюзивных предложений.
+          {{ $t('subscribeText') }}
         </p>
         <form :class="b('form')">
-          <input :class="b('input')" type="text" placeholder="Ваш email">
+          <input :class="b('input')" type="text" :placeholder="$t('emailPlaceholder')">
           <button :class="b('button')">
-            Подписаться
+            {{ $t('subscribeBtn') }}
           </button>
           <div :class="b('faq')">
-            Нажимая на кнопку “Подписаться”, вы принимаете правила <a :class="b('faq-link')" href="#"> пользовательского соглашения </a>
+            {{ $t('subscribeFaq') }} <a :class="b('faq-link')" href="#"> {{ $t('subscribeFaqLink') }} </a>
           </div>
         </form>
       </div>
     </div>
-    <img :class="b('coffee')" src="@/assets/images/mailing/cof.png" alt="coffee" data-aos="fade-left" data-aos-duration="1000">
+    <img :class="b('coffee')" src="@/assets/images/mailing/cof.png" alt="coffee">
   </section>
 </template>
 

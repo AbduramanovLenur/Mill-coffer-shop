@@ -5,11 +5,11 @@
         <img :class="b('image')" :src="require('@/assets/images/catalog/' + cart.img)" :alt="cart.alt" height="275"
           width="255">
         <div :class="b('text')">
-          {{ cart.title }}
+          {{ cart.title[$i18n.locale] }}
         </div>
       </div>
       <nuxt-link :class="b('link')" :to="cart.link">
-        {{ cart.button }}
+        {{ $t("buyBtn") }}
       </nuxt-link>
     </article>
   </li>

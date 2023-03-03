@@ -1,10 +1,10 @@
 <template>
   <div :class="b()">
     <h3 :class="b('title')">
-      {{ articleContent.title }}
+      {{ articleContent.title[$i18n.locale] }}
     </h3>
     <p :class="b('text')">
-      {{ articleContent.text }}
+      {{ articleContent.text[$i18n.locale] }}
     </p>
     <ArticleLinkBtn />
   </div>

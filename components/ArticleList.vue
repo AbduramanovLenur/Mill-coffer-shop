@@ -4,10 +4,10 @@
       <div :class="b('inner')">
         <div :class="b('top')">
           <Title :maxWidth="450">
-            Новости компании
+            {{ $t('companyNews') }}
           </Title>
           <nuxt-link :class="b('read')" to="/">
-            Читать все
+            {{ $t('readAll') }}
           </nuxt-link>
         </div>
         <div :class="b('wrapper')">

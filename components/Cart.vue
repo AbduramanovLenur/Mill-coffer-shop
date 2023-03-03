@@ -1,63 +1,70 @@
 <template>
   <li :class="b('')" data-aos="flip-left" data-aos-duration="1000">
-    <div :class="b('box')">
+    <article :class="b('box')">
       <div :class="b('content')">
-        <div class="info">
+        <div class="b('info')">
           <Rating :class="b('rating')" :grade="cart.rating" :maxStars="5" />
           <div :class="b('statistics')">
             <div :class="b('statistics-number')">
               {{ cart.rating }}.0
             </div>
             <div :class="b('statistics-review')">
-              ({{ cart.review }} отзыва)
+              ({{ cart.review }} {{ $t('reviewText') }})
             </div>
           </div>
         </div>
         <div :class="b('gram')">
-          {{ cart.gram }} г.
+          {{ cart.gram }} {{ unit[$i18n.locale] }}
         </div>
       </div>
       <div :class="b('pictures')">
         <img :src="cart.images" :alt="cart.alt">
       </div>
       <h3 :class="b('title')">
-        {{ cart.title }}
+        {{ cart.title[$i18n.locale] }}
       </h3>
       <div :class="b('subtitle')">
-        {{ cart.subtitle }}
+        {{ cart.subtitle[$i18n.locale] }}
       </div>
       <div :class="b('wrapper')">
         <div :class="b('price')">
           {{ cart.price }} ₽
         </div>
-        <button :class="b('button')">
-          В корзину
+        <button :class="b('button cart-button')">
+          {{ $t('toBasket') }}
         </button>
       </div>
-    </div>
+    </article>
   </li>
 </template>
 
 <script>
 export default {
-  name: "HealthProductCart",
+  name: "Cart",
   props: {
     cart: {
       type: Object,
       default: () => { }
+    }
+  },
+  data: () => {
+    return {
+      unit: {
+        ru: 'г.',
+        en: 'g.'
+      }
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.health-product-cart {
+.cart {
   @media (max-width: 576px) {
     display: flex;
     justify-content: center;
   }
   &__box {
-    padding: 30px 15px 50px;
     border: 1px solid #E4E4E4;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 30px rgba(149, 149, 149, 0.25);
@@ -65,6 +72,10 @@ export default {
     transition: 0.5s;
     max-width: 400px;
     width: 100%;
+    padding: 30px 40px 50px;
+    @media (max-width: 1536px) {
+      padding: 30px 15px 50px;
+    }
   }
   &__content {
     display: flex;
@@ -141,8 +152,8 @@ export default {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.16;
-    max-width: 120px;
-    margin-bottom: 35px;
+    max-width: 210px;
+    margin-bottom: 30px;
     @media (max-width: 1024px) {
       margin-bottom: 20px;
     }
@@ -188,17 +199,17 @@ export default {
 }
 
 @media (hover: hover) {
-  .health-product-cart {
+  .cart {
     &__box {
       &:hover {
-        -webkit-box-shadow: 0px 0px 50px 12px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0px 0px 50px 12px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 0px 50px 12px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 50px 12px rgba(0, 0, 0, 0.2) !important;
+        -moz-box-shadow: 0px 0px 50px 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0px 0px 50px 12px rgba(0, 0, 0, 0.2) !important;
       }
     }
     &__button {
       &:hover {
-        background-color: var(--hover-color-btn);
+        background-color: var(--hover-color-btn) !important;
       }
     }
   }

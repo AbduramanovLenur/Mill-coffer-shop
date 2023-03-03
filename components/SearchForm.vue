@@ -1,6 +1,6 @@
 <template>
   <form :class="b('')">
-    <input :class="b('input')" type="text" placeholder="Поиск по товарам">
+    <input :class="b('input')" type="text" :placeholder="$t('searchPlaceholder')">
     <span :class="b('search')">
       <Icon name="search" />
     </span>

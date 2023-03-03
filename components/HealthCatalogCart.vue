@@ -5,7 +5,7 @@
         <img :src="catalog.images" :alt="catalog.alt">
       </div>
       <div :class="b('title')">
-        {{ catalog.title }}
+        {{ catalog.title[$i18n.locale] }}
       </div>
     </nuxt-link>
   </li>
@@ -25,10 +25,8 @@ export default {
 
 <style lang="scss" scoped>
 .health-catalog-cart {
-  // @media (max-width: 540px) {
-  //   margin: 0 auto;
-  // }
   &__link {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -43,9 +41,6 @@ export default {
     @media (max-width: 768px) {
       padding: 15px;
     }
-    // @media (max-width: 540px) {
-    //   max-width: 380px;
-    // }
   }
   &__picture {
     height: 100%;
@@ -58,7 +53,6 @@ export default {
     font-size: 25px;
     font-weight: 700;
     line-height: 1.2;
-    color: #000000;
     max-width: 240px;
     @media (max-width: 1350px) {
       font-size: 20px;

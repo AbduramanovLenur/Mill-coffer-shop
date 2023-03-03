@@ -2,7 +2,7 @@
   <ul :class="b()">
     <li :class="b('item')" v-for="item in menu" :key="item.id">
       <nuxt-link :class="b('link')" :to="item.link">
-        {{ item.title }}
+        {{ item.title[$i18n.locale] }}
       </nuxt-link>
     </li>
   </ul>
@@ -16,18 +16,27 @@ export default {
       menu: [
         {
           id: 1,
-          title: "Каталог товаров",
-          link: "catalog"
+          title: {
+            ru: "Каталог товаров",
+            en: "Catalog"
+          },
+          link: "Catalog"
         },
         {
           id: 2,
-          title: "Блог",
-          link: "blog"
+          title: {
+            ru: "Блог",
+            en: "Blog"
+          },
+          link: "Blog"
         },
         {
           id: 3,
-          title: "Контакты",
-          link: "contact"
+          title: {
+            ru: "Контакты",
+            en: "Contacts"
+          },
+          link: "Contact"
         }
       ]
     }
@@ -60,7 +69,7 @@ export default {
       left: 50%;
       width: 0%;
       height: 2px;
-      background: var(--yellow);
+      background: var(--red);
       transition: 0.4s ease-out;
     }
     @media (max-width: 1152px) {

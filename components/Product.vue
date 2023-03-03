@@ -3,15 +3,14 @@
     <div class="container">
       <div :class="b('inner')">
         <Title :class="b('title')" :pxMargin="50" :maxWidth="460">
-          Товары со скидкой
+          {{ $t('saleTitle') }}
         </Title>
         <p :class="b('text')">
-          Наша компания предлагает покупать товар со скидкой не только в дни распродаж
-          или в течение действия ограниченных предложений, но и пользоваться скидками постоянно!
+          {{ $t('saleText') }}
         </p>
         <ProductSlider :class="b('slider')"/>
         <nuxt-link :class="b('all')" to="/">
-          Смотреть все
+          {{ $t('saleBtn') }}
         </nuxt-link>
       </div>
     </div>
@@ -34,6 +33,7 @@ export default {
   }
   &__title {
     margin-left: auto;
+    text-align: right;
     @media (max-width: 576px) {
       --max-width: 100%;
       text-align: center;
@@ -43,6 +43,7 @@ export default {
     max-width: 1110px;
     margin-left: auto;
     margin-bottom: 47px;
+    text-align: right;
     @media (max-width: 576px) {
       text-align: center;
       font-size: 20px;

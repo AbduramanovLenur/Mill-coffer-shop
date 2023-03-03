@@ -1,10 +1,89 @@
 {
-  "news1": {
-    "title": "Танзанийский кофе. Откуда он взялся и почему мы его так любим?",
-    "text": "Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория. Но наш интерес вызван не столько природными красотами, сколько кофе Танзании, который выращивается здесь очень давно."
+  "news": {
+    "news1": {
+      "title": {
+        "ru": "Танзанийский кофе. Откуда он взялся и почему мы его так любим?",
+        "en": "Tanzanian coffee. Where did it come from and why do we love it so much?"
+      },
+      "text": {
+        "ru": "Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.",
+        "en": "Tanzania is a beautiful African country. It is here that the legendary geographical objects are located - Mount Kilimanjaro and Lake Victoria."
+      }
+    },
+    "news2": {
+      "title": {
+        "ru": "Африканский кофе Кения АА",
+        "en": "African Coffee Kenya AA"
+      },
+      "text": {
+        "ru": "Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики.",
+        "en": "Kenya AA - this coffee, from an African country, has a reputation for being one of the most delicious and colorful varieties in the world. Many roasters appreciate local highland Arabica varieties."
+      }
+    }
   },
-  "news2": {
-    "title": "Африканский кофе Кения АА",
-    "text": "Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики."
-  }
+  "newsTab": [
+    {
+      "id": 1,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/news.jpg?alt=media&token=3691e246-e766-4ccc-8323-32f4781c0d97",
+      "alt": "picture",
+      "title": {
+        "ru": "Танзанийский кофе. Откуда он взялся и почему мы его так любим?",
+        "en": "Tanzanian coffee. Where did it come from and why do we love it so much?"
+      },
+      "text1": {
+        "ru": "Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.",
+        "en": "Tanzania is a beautiful African country. It is here that the legendary geographical objects are located - Mount Kilimanjaro and Lake Victoria."
+      },
+      "text2": {
+        "ru": "Но наш интерес вызван не столько природными красотами, сколько кофе...",
+        "en": "But our interest is caused not so much by natural beauties as by coffee..."
+      },
+      "author": {
+        "ru": "Иван Иванов",
+        "en": "Ivan Ivanov"
+      }
+    },
+    {
+      "id": 2,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/news.jpg?alt=media&token=3691e246-e766-4ccc-8323-32f4781c0d97",
+      "alt": "picture",
+      "title": {
+        "ru": "Танзанийский кофе. Откуда он взялся и почему мы его так любим?",
+        "en": "Tanzanian coffee. Where did it come from and why do we love it so much?"
+      },
+      "text1": {
+        "ru": "Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.",
+        "en": "Tanzania is a beautiful African country. It is here that the legendary geographical objects are located - Mount Kilimanjaro and Lake Victoria."
+      },
+      "text2": {
+        "ru": "Но наш интерес вызван не столько природными красотами, сколько кофе...",
+        "en": "But our interest is caused not so much by natural beauties as by coffee..."
+      },
+      "author": {
+        "ru": "Иван Иванов",
+        "en": "Ivan Ivanov"
+      }
+    },
+    {
+      "id": 3,
+      "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/news.jpg?alt=media&token=3691e246-e766-4ccc-8323-32f4781c0d97",
+      "alt": "picture",
+      "title": {
+        "ru": "Танзанийский кофе. Откуда он взялся и почему мы его так любим?",
+        "en": "Tanzanian coffee. Where did it come from and why do we love it so much?"
+      },
+      "text1": {
+        "ru": "Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.",
+        "en": "Tanzania is a beautiful African country. It is here that the legendary geographical objects are located - Mount Kilimanjaro and Lake Victoria."
+      },
+      "text2": {
+        "ru": "Но наш интерес вызван не столько природными красотами, сколько кофе...",
+        "en": "But our interest is caused not so much by natural beauties as by coffee..."
+      },
+      "author": {
+        "ru": "Иван Иванов",
+        "en": "Ivan Ivanov"
+      }
+    }
+  ]
 }

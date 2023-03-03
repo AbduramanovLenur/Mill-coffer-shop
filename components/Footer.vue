@@ -7,6 +7,9 @@
             <img src="@/assets/images/logo.png" alt="logo">
           </nuxt-link>
         </div>
+        <div :class="b('languages')">
+          <nuxt-link :class="b('language')" v-for="locale in $i18n.locales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+        </div>
         <Menu />
       </div>
     </div>
@@ -37,6 +40,10 @@ export default {
     @media (max-width: 540px) {
       align-items: start;
     }
+  }
+  &__languages {
+    display: flex;
+    gap: 10px;
   }
 }
 </style>

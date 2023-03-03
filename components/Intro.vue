@@ -4,19 +4,14 @@
       <div :class="b('inner')">
         <div :class="b('content')">
           <h1 :class="b('title')">
-            Свежеобжаренный кофе
+            {{ $t('freshlyTitle') }}
           </h1>
-          <p :class="b('text')">
-            Кофе Калининградской обжарки из разных стран произрастания с доставкой на дом.
-            <br>
-            <br>
-            Мы обжариваем кофе <span>каждые выходные.</span>
-          </p>
+          <p :class="b('text')" v-html="$t('roastedText')"></p>
           <div :class="b('picture')">
             <img src="@/assets/images/intro/cup-grains.png" alt="cup-grains">
           </div>
           <nuxt-link :class="b('catalog')" to="/catalog">
-            Посмотреть каталог
+            {{ $t('catalogBtn') }}
           </nuxt-link>
         </div>
         <img :class="b('cup-grains')" src="@/assets/images/intro/cup-grains.png" alt="cup-grains">
@@ -73,7 +68,7 @@ export default {
       text-align: center;
     }
   }
-  &__text {
+  ::v-deep &__text {
     font-weight: 500;
     line-height: 1.28;
     max-width: 658px;
@@ -86,10 +81,10 @@ export default {
     }
     @media (max-width: 864px) {
       margin-bottom: 30px;
+      text-align: center;
     }
     @media (max-width: 480px) {
       font-size: 20px;
-      text-align: center;
     }
   }
   &__picture {

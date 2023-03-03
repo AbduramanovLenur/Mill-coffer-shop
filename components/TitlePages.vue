@@ -38,6 +38,7 @@ export default {
   max-width: var(--max-width);
   @media (max-width: 768px) {
     font-size: 50px;
+    --px-margin: 80px !important;
   }
   @media (max-width: 600px) {
     --px-margin: 50px !important;

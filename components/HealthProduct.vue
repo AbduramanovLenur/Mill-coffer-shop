@@ -1,18 +1,18 @@
 <template>
-  <section :class="b('')">
-    <div :class="b('overlay')">
+  <section :class="b('')" class="decor--bg">
+    <div class="overlay">
       <div class="container">
-        <div :class="b('inner')">
-          <Breadcrumb :breadcrumbs="breadcrumb" :pxMargin="90" />
+        <div :class="b('inner catalog-block--padding')">
+          <Breadcrumb :breadcrumbs="breadcrumb" :pxMargin="90" color="fff"/>
           <TitlePages :pxMargin="80" :maxWidth="650">
-            Здоровое питание
+            {{ $t('healthTitle') }}
           </TitlePages>
-          <ul :class="b('catalog')">
+          <ul :class="b('catalog grid-catalog grid-catalog--three')">
             <HealthCatalogCart v-for="item in catalogCart" :key="item.id" :catalog="item" />
           </ul>
           <Sort @sorted="sortArray" :product="productCart" />
-          <transition-group :class="b('list')" name="product-health" tag="ul">
-            <HealthProductCart v-for="item in productArray" :key="item.id" :cart="item" />
+          <transition-group :class="b('list grid--four')" name="product" tag="ul">
+            <Cart v-for="item in productArray" :key="item.id" :cart="item" />
           </transition-group>
         </div>
       </div>
@@ -27,9 +27,9 @@ export default {
   data: () => {
     return {
       breadcrumb: [
-        { id: 1, text: 'Главная', link: '/' },
-        { id: 2, text: 'Каталог товаров', link: 'catalog' },
-        { id: 3, text: 'Здоровое питание', link: 'Health' }
+        { id: 1, text: {ru: 'Главная', en: 'Home'}, link: '/' },
+        { id: 2, text: {ru: 'Каталог товаров', en: 'Catalog'}, link: 'Catalog' },
+        { id: 3, text: {ru: 'Здоровое питание', en: 'Healthy eating'}, link: 'Health' }
       ],
       productArray: [],
     }
@@ -53,62 +53,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.product-health {
-  &-enter-active,
-  &-leave-active {
-    transition: all 0.5s ease;
-  }
-  &-enter-from,
-  &-leave-to {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-}
-
-.health-product {
-  background-image: url("@/assets/images/health/bg.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  &__overlay {
-    background-image: url('@/assets/images/health/decor.png');
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-clip: cover;
-  }
-  &__inner {
-    padding: 40px 0 120px;
-    @media (max-width: 480px) {
-      padding: 20px 0 60px;
-    }
-  }
-  &__catalog {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px 20px;
-    margin-bottom: 70px;
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 540px) {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-  }
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 70px 20px;
-    @media (max-width: 1350px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px 20px;
-    }
-    @media (max-width: 864px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 576px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-}</style>
+<style lang="scss" scoped></style>

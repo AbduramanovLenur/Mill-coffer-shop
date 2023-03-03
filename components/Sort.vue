@@ -1,8 +1,8 @@
 <template>
   <div :class="b('')">
-    <div :class="b('filter-text')">Сортировка:</div>
+    <div :class="b('filter-text')">{{ $t('sortTitle') }}</div>
     <select :class="b('select')" @change="sortArray($event)">
-      <option :class="b('option')" v-for="item in option" :value="item.value" :key="item.id"> {{ item.text }} </option>
+      <option :class="b('option')" v-for="item in option" :value="item.value" :key="item.id"> {{ item.text[$i18n.locale] }} </option>
     </select>
   </div>
 </template>
@@ -21,10 +21,10 @@ export default {
   data: () => {
     return {
       option: [
-        {id: 1, text: 'Все', value: 'all'},
-        {id: 2, text: 'По возрастанию цены', value: 'lowPrice'},
-        {id: 3, text: 'По убыванию цены', value: 'highPrice'},
-        {id: 4, text: 'По рейтингу', value: 'rating'}
+        {id: 1, text: {ru: 'Все', en: 'All'}, value: 'all'},
+        {id: 2, text: {ru: 'По возрастанию цены', en: 'Price Ascending'}, value: 'lowPrice'},
+        {id: 3, text: {ru: 'По убыванию цены', en: 'Price Descending'}, value: 'highPrice'},
+        {id: 4, text: {ru: 'По рейтингу', en: 'By rating'}, value: 'rating'}
       ],
       sortTexts: ['all', 'lowPrice', 'highPrice', 'rating'],
     }

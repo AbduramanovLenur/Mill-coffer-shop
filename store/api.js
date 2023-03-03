@@ -2,7 +2,12 @@ export const state = () => ({
   promo: [],
   article: {},
   healthCatalog: [],
-  healthProduct: []
+  healthProduct: [],
+  vendingCatalog: [],
+  vendingProduct: [],
+  teaCatalog: [],
+  teaProduct: [],
+  tabNews: []
 })
 
 export const mutations = {
@@ -17,6 +22,21 @@ export const mutations = {
   },
   SET_HEALTH_PRODUCT(state, healthProduct) {
     state.healthProduct = healthProduct;
+  },
+  SET_VENDING_CATALOG(state, vendingCatalog) {
+    state.vendingCatalog = vendingCatalog;
+  },
+  SET_VENDING_PRODUCT(state, vendingProduct) {
+    state.vendingProduct = vendingProduct;
+  },
+  SET_TEA_CATALOG(state, teaCatalog) {
+    state.teaCatalog = teaCatalog;
+  },
+  SET_TEA_PRODUCT(state, teaProduct) {
+    state.teaProduct = teaProduct;
+  },
+  SET_TAB_NEWS(state, tabNews) {
+    state.tabNews = tabNews;
   }
 }
 
@@ -36,5 +56,10 @@ export const getters = {
   getPromo: state => state.promo,
   getArticleContent: state => state.article,
   getHealthCatalog: state => state.healthCatalog,
-  getHealthProduct: state => state.healthProduct
+  getHealthProduct: state => state.healthProduct,
+  getVendingCatalog: state => state.vendingCatalog,
+  getVendingProduct: state => state.vendingProduct,
+  getTeaCatalog: state => state.teaCatalog,
+  getTeaProduct: state => state.teaProduct,
+  getTabNews: state => state.tabNews
 }
