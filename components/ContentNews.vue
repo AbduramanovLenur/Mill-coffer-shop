@@ -56,6 +56,9 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 50px 0;
+    @media (max-width: 480px) {
+      padding: 20px 0;
+    }
   }
   &__picture {
     max-width: 500px;
@@ -64,9 +67,15 @@ export default {
     img {
       width: 100%;
     }
+    @media (max-width: 480px) {
+      margin-bottom: 40px;
+    }
   }
   &__text {
     font-size: 45px;
+    @media (max-width: 480px) {
+      font-size: 30px;
+    }
   }
 }
 </style>

@@ -31,7 +31,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "@/plugins/aos.client.js",
-    "@/plugins/bem-classnames.js"
+    "@/plugins/bem-classnames.js",
+    "@/plugins/map.js"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -72,5 +73,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [
+      "vue2-google-maps"
+    ]
   }
 }

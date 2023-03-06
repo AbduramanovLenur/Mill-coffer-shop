@@ -1,20 +1,18 @@
 <template>
   <div :class="b('')">
-    <div :class="b('inner')">
-      <div :class="b('wrapper')">
-        <h2 :class="b('title')">
-          {{ $t('tabNewsTitle') }}
-        </h2>
-        <Tabs :class="b('list')" :tab="tabs" :maxWidth="260" @setIsActiveTab="setIsActive" />
-      </div>
-      <ContentNews :isActiveTab="activeTab" />
+    <div :class="b('wrapper')">
+      <h2 :class="b('title')">
+        {{ $t('tabNewsTitle') }}
+      </h2>
+      <Tabs :class="b('list')" :grid5="true" :tab="tabs" :maxWidth="260" @setIsActiveTab="setIsActive" />
     </div>
+    <ContentNews :isActiveTab="activeTab" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "TabNews",
+  name: "News",
   data: () => {
     return {
       tabs: [
@@ -37,21 +35,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tab-news {
+.news {
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 111px;
     margin-bottom: 60px;
+    @media (max-width: 864px) {
+      gap: 50px;
+    }
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
   }
-
   &__title {
     font-size: 40px;
     line-height: 1.2;
     font-weight: 900;
+    @media (max-width: 1024px) {
+      font-size: 30px;
+    }
+    @media (max-width: 480px) {
+      font-size: 25px;
+    }
   }
-
   &__list {
     width: 100%;
   }

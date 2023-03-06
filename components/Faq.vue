@@ -1,13 +1,17 @@
 <template>
   <div :class="b('')">
-    <div :class="b('inner')">
-      <h2 :class="b('title')">
-        {{ $t('faqTitle') }}
-      </h2>
-      <ul :class="b('list')">
-        <FaqItem v-for="item in faq" :key="item.id" :accordion="item"/>
-      </ul>
-    </div>
+    <h2 :class="b('title')">
+      {{ $t('faqTitle') }}
+    </h2>
+    <ul :class="b('list')">
+      <FaqItem
+        v-for="faq in faqs"
+        :faq="faq"
+        :open="faq.open"
+        :key="faq.id"
+        @toggleOpen="toggleOpen"
+        />
+    </ul>
   </div>
 </template>
 
@@ -16,7 +20,7 @@ export default {
   name: "Faq",
   data: () => {
     return {
-      faq: [
+      faqs: [
         {
           id: 1,
           question: {
@@ -79,6 +83,19 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    toggleOpen(index) {
+      this.faqs = this.faqs.map(item => {
+        if (index === item.id) {
+          item.open = !item.open;
+        } else {
+          item.open = false;
+        }
+
+        return item;
+      });
+    }
   }
 }
 </script>
@@ -88,19 +105,30 @@ export default {
   background-image: url('@/assets/images/accordion/coffee.png');
   background-repeat: no-repeat;
   background-position: left;
-  background-size: contain;
-  height: 100vh;
+  @media (max-width: 1024px) {
+    background-image: none;
+  }
   &__title {
     font-size: 40px;
     font-weight: 900;
     line-height: 1.25;
     max-width: 350px;
+    margin-bottom: 55px;
+    @media (max-width: 800px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 640px) {
+      font-size: 30px;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 30px;
+    @media (max-width: 800px) {
+      gap: 20px;
+    }
   }
 }
 </style>

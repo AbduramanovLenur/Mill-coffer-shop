@@ -3,7 +3,7 @@
     <div class="container">
       <div :class="b('inner')">
         <Breadcrumb :breadcrumbs="breadcrumb" :pxMargin="50" color="222222"/>
-        <Tabs :tab="tabs" :pxMargin="70" :maxWidth="540" @setIsActiveTab="setIsActive"/>
+        <Tabs :tab="tabs" :grid3="true" :pxMargin="70" :maxWidth="540" @setIsActiveTab="setIsActive"/>
         <TabsContent :isActiveTab="activeTab"/>
       </div>
     </div>
@@ -20,11 +20,11 @@ export default {
         { id: 2, text: {ru: 'Блог', en: 'Blog'}, link: 'Blog' },
       ],
       tabs: [
-        {id: 1, text: {ru: 'Обучение', en: 'Learning'}, isActive: false, buttonName: 'first-tab'},
+        {id: 1, text: {ru: 'Обучение', en: 'Learning'}, isActive: true, buttonName: 'first-tab'},
         {id: 2, text: {ru: 'Новости', en: 'News'}, isActive: false, buttonName: 'two-tab'},
-        {id: 3, text: {ru: 'Частые вопросы', en: 'FAQ'}, isActive: true, buttonName: 'three-tab'}
+        {id: 3, text: {ru: 'Частые вопросы', en: 'FAQ'}, isActive: false, buttonName: 'three-tab'}
       ],
-      activeTab: "three-tab"
+      activeTab: "first-tab"
     }
   },
   methods: {
@@ -40,6 +40,9 @@ export default {
 .blog-content {
   &__inner {
     padding: 40px 0 100px;
+    @media (max-width: 768px) {
+      padding: 40px 0;
+    }
   }
 }
 </style>

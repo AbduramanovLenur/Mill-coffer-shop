@@ -1,5 +1,6 @@
 <template>
   <main class="main">
+    <ContactContent />
     <Mailing />
   </main>
 </template>

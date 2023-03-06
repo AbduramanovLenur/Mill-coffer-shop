@@ -1,20 +1,17 @@
 <template>
   <ul :class="b('')">
     <li :class="b('item')" v-show="getIsActive('first-tab')">
-      <Instruction />
+      <ContactInfo />
     </li>
     <li :class="b('item')" v-show="getIsActive('two-tab')">
-      <News />
-    </li>
-    <li :class="b('item')" v-show="getIsActive('three-tab')">
-      <Faq />
+      <ContactShop />
     </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: "TabsContent",
+  name: "ContactContentTab",
   props: {
     isActiveTab: {
       type: String,
@@ -29,5 +26,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
