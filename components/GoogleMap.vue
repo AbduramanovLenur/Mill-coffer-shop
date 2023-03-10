@@ -97,6 +97,13 @@ export default {
   max-width: 960px;
   width: 100%;
   height:0;
+  border-radius: 30px;
+  @media (max-width: 1024px) {
+    padding: 30%;
+  }
+  @media (max-width: 480px) {
+      padding: 40%;
+  }
   &__overlay {
     left:0;
     top:0;

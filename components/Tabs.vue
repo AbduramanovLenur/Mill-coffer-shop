@@ -59,12 +59,24 @@ export default {
   gap: 20px;
   margin-bottom: var(--px-margin);
   &.grid2 {
-    grid-template-columns: repeat(2, 1fr);
+    --grid-template-columns: 2;
+    grid-template-columns: repeat(var(--grid-template-columns), 1fr);
+    @media (max-width: 600px) {
+      --grid-template-columns: 1;
+      --px-margin: 30px !important;
+    }
+    .tabs__button {
+      @media (max-width: 600px) {
+        font-size: 18px;
+        padding: 15px 10px;
+      }
+    }
   }
   &.grid--3 {
-    grid-template-columns: repeat(3, 1fr);
+    --grid-template-columns: 3;
+    grid-template-columns: repeat(var(--grid-template-columns), 1fr);
     @media (max-width: 800px) {
-      grid-template-columns: repeat(4, 1fr);
+      --grid-template-columns: 4;
       --px-margin: 50px !important;
     }
     @media (max-width: 480px) {
@@ -100,12 +112,13 @@ export default {
     }
   }
   &.grid--5 {
-    grid-template-columns: repeat(5, 1fr);
+    --grid-template-columns: 5;
+    grid-template-columns: repeat(var(--grid-template-columns), 1fr);
     @media (max-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
+      --grid-template-columns: 4;
     }
     @media (max-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
+      --grid-template-columns: 3;
     }
     .tabs__button {
       @media (max-width: 540px) {

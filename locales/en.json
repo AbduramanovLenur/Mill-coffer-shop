@@ -52,5 +52,19 @@
   "legalTitle": "Legal address:",
   "addressText": "Russian Federation, 238310, Kaliningrad region, Guryevsky district, Vasilkovo village, Shaturskaya street, 4A",
   "warehouseTitle": "Warehouse address:",
-  "warehouseText": "Moscow region, Balashikha, Western industrial zone, Highway of enthusiasts 1"
+  "warehouseText": "Moscow region, Balashikha, Western industrial zone, Highway of enthusiasts 1",
+  "piterTitle": "Our stores St. Petersburg",
+  "kalinigradTitle": "Our stores Kaliningrad region",
+  "addressPiter1": "Gorokhovaya, 53",
+  "addressPiter2": "Moscow, 53",
+  "addressKalinigrad1": "Sovetsk, Goncharova 2a",
+  "addressKalinigrad2": "Chernyakhovsk, Pionerskaya 1",
+  "addressKalinigrad3": "Ulyana-Gromova 15",
+  "addressKalinigrad4": "Soviet Avenue 6a",
+  "addressKalinigrad5": "Guryevsk, Chestnut 1g",
+  "addressKalinigrad6": "Chernyakhovsky 15",
+  "addressKalinigrad7": "Panina 2a",
+  "addressKalinigrad8": "Leninsky 8B",
+  "addressKalinigrad9": "Aksakov 133",
+  "addressKalinigrad10": "Linden Alley 2"
 }

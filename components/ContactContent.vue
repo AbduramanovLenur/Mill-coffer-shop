@@ -39,6 +39,9 @@ export default {
 .contact-content {
   &__inner {
     padding: 40px 0 80px;
+    @media (max-width: 480px) {
+      padding: 40px 0;
+    }
   }
 }
 </style>

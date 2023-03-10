@@ -1,7 +1,7 @@
 <template>
   <ul :class="b('')">
-    <li :class="b('item')" v-for="item in menu" :key="item.id">
-      <nuxt-link :to="item.to" :class="b('link')" @click="activeClass">
+    <li :class="b('item')" v-for="item in menu" :key="item.id" @click="activeClass">
+      <nuxt-link :to="item.to" :class="b('link')">
         {{ item.title }}
       </nuxt-link>
     </li>
