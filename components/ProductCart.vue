@@ -36,7 +36,7 @@
       </div>
     </div>
     <h3 :class="b('title')">
-      {{ cart.title }}
+      {{ cart.title[$i18n.locale] }}
     </h3>
     <div :class="b('subtitle')">
       {{ cart.subtitle[$i18n.locale] }}
@@ -50,7 +50,11 @@
           {{ cart.price }} ₽
         </div>
       </div>
-      <button :class="b('button')">
+      <button
+        :class="{'product-cart__button': b('button'), isActive: cart.isBasketActive}"
+        :disabled="cart.isBasketActive"
+        @click="multyFunction(cart)"
+      >
         {{ $t('cartBtn') }}
       </button>
     </div>
@@ -59,12 +63,22 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: "ProductCart",
   props: {
     cart: {
       type: Object,
       default: () => {}
+    }
+  },
+  methods: {
+    ...mapActions('basket', ['addCartToBasket']),
+    ...mapActions('product', ['addActiveClassButton']),
+    multyFunction(element) {
+      this.addCartToBasket(element);
+      this.addActiveClassButton({id: element.id, string: 'basket'});
     }
   }
 }
@@ -110,6 +124,10 @@ export default {
     display: flex;
     gap: 20px;
     margin-bottom: 35px;
+  }
+  &__picture {
+    display: flex;
+    align-items: center;
   }
   &__statistics {
     display: flex;
@@ -170,13 +188,6 @@ export default {
       align-items: center;
     }
   }
-  &__prices {
-    @media (max-width: 384px) {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-  }
   &__oldprice {
     font-size: 25px;
     font-weight: 500;
@@ -194,6 +205,7 @@ export default {
     color: #222222;
     @media (max-width: 480px) {
       font-size: 30px;
+      white-space: nowrap;
     }
   }
   &__button {
@@ -211,6 +223,9 @@ export default {
     padding: 13px;
     color: #FFFFFF;
     transition: 0.5s;
+    &.isActive {
+      opacity: 0.5;
+    }
   }
   &__product-images {
     position: absolute;

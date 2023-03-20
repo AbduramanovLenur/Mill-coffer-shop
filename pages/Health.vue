@@ -14,12 +14,12 @@ export default {
       { url: 'https://health-eat-top-default-rtdb.firebaseio.com/product-bottom.json', nameSetFunction: 'SET_HEALTH_PRODUCT'}
     ];
 
-    if (store.getters['api/getHealthCatalog'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[0]);
+    if (store.getters['product/getHealthCatalog'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[0]);
     }
 
-    if (store.getters['api/getHealthProduct'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[1]);
+    if (store.getters['product/getHealthProduct'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[1]);
     }
   }
 }

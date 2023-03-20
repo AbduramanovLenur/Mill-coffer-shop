@@ -178,3 +178,12 @@ svg {
     --catalog-padding-bottom: 60px;
   }
 }
+.basket-title {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.22;
+  max-width: 140px;
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+}

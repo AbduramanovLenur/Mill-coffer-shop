@@ -1,19 +1,26 @@
-export const state = () => ({
+const state = () => ({
   search: false
 })
 
-export const mutations = {
+const mutations = {
   SET_SEARCH(state) {
     state.search ? state.search = false : state.search = true;
   }
 }
 
-export const actions = {
+const actions = {
   isActiveSearch({ commit }) {
     commit("SET_SEARCH");
   }
 }
 
-export const getters = {
+const getters = {
   getSearch: state => state.search
+}
+
+export default {
+  state,
+  mutations,
+  actions,
+  getters
 }

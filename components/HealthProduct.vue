@@ -41,10 +41,10 @@ export default {
   },
   computed: {
     catalogCart() {
-      return this.$store.getters['api/getHealthCatalog'];
+      return this.$store.getters['product/getHealthCatalog'];
     },
     productCart() {
-      return this.$store.getters['api/getHealthProduct'];
+      return this.$store.getters['product/getHealthProduct'];
     }
   },
   mounted() {

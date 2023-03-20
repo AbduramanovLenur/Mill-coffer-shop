@@ -9,7 +9,7 @@ export default {
   name: "TabsNews",
   computed: {
     tabNews() {
-      return this.$store.getters['api/getTabNews'];
+      return this.$store.getters['product/getTabNews'];
     }
   }
 }

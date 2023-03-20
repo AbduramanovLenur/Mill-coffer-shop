@@ -14,12 +14,12 @@ export default {
       { url: 'https://health-eat-top-default-rtdb.firebaseio.com/vending-bottom.json', nameSetFunction: 'SET_VENDING_PRODUCT'}
     ];
 
-    if (store.getters['api/getVendingCatalog'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[0]);
+    if (store.getters['product/getVendingCatalog'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[0]);
     }
 
-    if (store.getters['api/getVendingProduct'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[1]);
+    if (store.getters['product/getVendingProduct'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[1]);
     }
   }
 }

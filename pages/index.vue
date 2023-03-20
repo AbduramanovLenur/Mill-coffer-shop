@@ -21,12 +21,12 @@ export default {
       { url: 'https://news-content-6b2d0-default-rtdb.firebaseio.com/news.json', nameSetFunction: 'SET_ARTICLE' }
     ];
 
-    if (store.getters['api/getPromo'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[0]);
+    if (store.getters['product/getPromo'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[0]);
     }
 
-    if (Object.keys(store.getters['api/getArticleContent']).length === 0) {
-      await store.dispatch('api/fetch', fetchApi[1]);
+    if (Object.keys(store.getters['product/getArticleContent']).length === 0) {
+      await store.dispatch('product/fetch', fetchApi[1]);
     }
   }
 }

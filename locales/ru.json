@@ -66,5 +66,10 @@
   "addressKalinigrad7": "Панина 2а",
   "addressKalinigrad8": "Ленинский 8Б",
   "addressKalinigrad9": "Аксакова 133",
-  "addressKalinigrad10": "Липовая Аллея 2"
+  "addressKalinigrad10": "Липовая Аллея 2",
+  "deleteAllButton": "Удалить все",
+  "basketText": "в корзине",
+  "deliveryTitle": "Доставка",
+  "сalculateButton": "Рассчитать доставку",
+  "emptyBasket": "Корзина пуста"
 }

@@ -57,7 +57,7 @@
   ],
   "product-bottom": [
     {
-      "id": 1,
+      "id": 7,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -71,10 +71,12 @@
       "gram": 100,
       "review": 52,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 2,
+      "id": 8,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -88,10 +90,12 @@
       "gram": 100,
       "review": 12,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 3,
+      "id": 9,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -105,10 +109,12 @@
       "gram": 100,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 4,
+      "id": 10,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -122,10 +128,12 @@
       "gram": 100,
       "review": 82,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 5,
+      "id": 11,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -139,10 +147,12 @@
       "gram": 100,
       "review": 2,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 6,
+      "id": 12,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -156,10 +166,12 @@
       "gram": 100,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 7,
+      "id": 13,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -173,10 +185,12 @@
       "gram": 100,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 8,
+      "id": 14,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -190,10 +204,12 @@
       "gram": 100,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 9,
+      "id": 15,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -207,10 +223,12 @@
       "gram": 100,
       "review": 62,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 10,
+      "id": 16,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -224,10 +242,12 @@
       "gram": 100,
       "review": 92,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 11,
+      "id": 17,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -241,10 +261,12 @@
       "gram": 100,
       "review": 25,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 12,
+      "id": 18,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -258,12 +280,14 @@
       "gram": 100,
       "review": 32,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/health-product.png?alt=media&token=3772fe5f-f4d1-4276-931e-0a722d215a5b",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     }
   ],
   "vending-top": [
     {
-      "id": 1,
+      "id": 19,
       "title": {
         "ru": "Гранулированный кофе",
         "en": "Granulated coffee"
@@ -272,7 +296,7 @@
       "alt": "vending"
     },
     {
-      "id": 2,
+      "id": 20,
       "title": {
         "ru": "Гранулированный цикорий",
         "en": "Granular chicory"
@@ -281,7 +305,7 @@
       "alt": "vending"
     },
     {
-      "id": 3,
+      "id": 21,
       "title": {
         "ru": "Зерновой кофе",
         "en": "Coffee beans"
@@ -290,7 +314,7 @@
       "alt": "vending"
     },
     {
-      "id": 4,
+      "id": 22,
       "title": {
         "ru": "Зерновой кофе",
         "en": "Coffee beans"
@@ -299,7 +323,7 @@
       "alt": "vending"
     },
     {
-      "id": 5,
+      "id": 23,
       "title": {
         "ru": "Гранулированный какао",
         "en": "Granulated cocoa"
@@ -308,7 +332,7 @@
       "alt": "vending"
     },
     {
-      "id": 6,
+      "id": 24,
       "title": {
         "ru": "Гранулированные кофейные напитки",
         "en": "Granulated coffee drinks"
@@ -317,7 +341,7 @@
       "alt": "vending"
     },
     {
-      "id": 7,
+      "id": 25,
       "title": {
         "ru": "Кофе порошкообразный",
         "en": "Powdered coffee"
@@ -326,7 +350,7 @@
       "alt": "vending"
     },
     {
-      "id": 8,
+      "id": 26,
       "title": {
         "ru": "Сухое молоко гранулированное",
         "en": "Powdered milk granulated"
@@ -337,7 +361,7 @@
   ],
   "vending-bottom": [
     {
-      "id": 1,
+      "id": 27,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -351,10 +375,12 @@
       "gram": 10,
       "review": 52,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 2,
+      "id": 28,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -368,10 +394,12 @@
       "gram": 10,
       "review": 12,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 3,
+      "id": 29,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -385,10 +413,12 @@
       "gram": 100,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 4,
+      "id": 30,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -402,10 +432,12 @@
       "gram": 10,
       "review": 82,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 5,
+      "id": 31,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -419,10 +451,12 @@
       "gram": 10,
       "review": 2,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 6,
+      "id": 32,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -436,10 +470,12 @@
       "gram": 10,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 7,
+      "id": 33,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -453,10 +489,12 @@
       "gram": 10,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 8,
+      "id": 34,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -470,10 +508,12 @@
       "gram": 10,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 9,
+      "id": 35,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -487,10 +527,12 @@
       "gram": 10,
       "review": 62,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 10,
+      "id": 36,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -504,10 +546,12 @@
       "gram": 10,
       "review": 92,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 11,
+      "id": 37,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -521,10 +565,12 @@
       "gram": 10,
       "review": 25,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 12,
+      "id": 38,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -538,12 +584,14 @@
       "gram": 10,
       "review": 32,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-cart.jpg?alt=media&token=e6b7e37f-daa5-45ab-b9bf-db9b3d5d1645",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     }
   ],
   "tea-top": [
     {
-      "id": 1,
+      "id": 39,
       "title": {
         "ru": "Черный чай",
         "en": "Black tea"
@@ -552,7 +600,7 @@
       "alt": "tea"
     },
     {
-      "id": 2,
+      "id": 40,
       "title": {
         "ru": "Зеленый чай",
         "en": "Green tea"
@@ -570,7 +618,7 @@
       "alt": "tea"
     },
     {
-      "id": 4,
+      "id": 41,
       "title": {
         "ru": "Молочный улунг",
         "en": "Milk Oolong"
@@ -579,7 +627,7 @@
       "alt": "tea"
     },
     {
-      "id": 5,
+      "id": 42,
       "title": {
         "ru": "Травяной чай",
         "en": "Herb tea"
@@ -588,7 +636,7 @@
       "alt": "tea"
     },
     {
-      "id": 6,
+      "id": 43,
       "title": {
         "ru": "Матча",
         "en": "Matcha"
@@ -597,7 +645,7 @@
       "alt": "tea"
     },
     {
-      "id": 7,
+      "id": 44,
       "title": {
         "ru": "Пуэр",
         "en": "Puer"
@@ -606,7 +654,7 @@
       "alt": "tea"
     },
     {
-      "id": 8,
+      "id": 45,
       "title": {
         "ru": "Кофейные напитки",
         "en": "Coffee drinks"
@@ -617,7 +665,7 @@
   ],
   "tea-bottom": [
     {
-      "id": 1,
+      "id": 46,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -631,10 +679,12 @@
       "gram": 10,
       "review": 52,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 2,
+      "id": 47,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -648,10 +698,12 @@
       "gram": 10,
       "review": 12,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 3,
+      "id": 48,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -665,10 +717,12 @@
       "gram": 100,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 4,
+      "id": 49,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -682,10 +736,12 @@
       "gram": 10,
       "review": 82,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 5,
+      "id": 50,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -699,10 +755,12 @@
       "gram": 10,
       "review": 2,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 6,
+      "id": 51,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -716,10 +774,12 @@
       "gram": 10,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 7,
+      "id": 52,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -733,10 +793,12 @@
       "gram": 10,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 8,
+      "id": 53,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -750,10 +812,12 @@
       "gram": 10,
       "review": 22,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 9,
+      "id": 54,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -767,10 +831,12 @@
       "gram": 10,
       "review": 62,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 10,
+      "id": 55,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -784,10 +850,12 @@
       "gram": 10,
       "review": 92,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 11,
+      "id": 56,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -801,10 +869,12 @@
       "gram": 10,
       "review": 25,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     },
     {
-      "id": 12,
+      "id": 57,
       "title": {
         "ru": "Наименование товара",
         "en": "Name of product"
@@ -818,7 +888,9 @@
       "gram": 10,
       "review": 32,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product.png?alt=media&token=db8e4689-3621-4822-bad2-a442ffb42345",
-      "alt": "product"
+      "alt": "product",
+      "isBasketActive": false,
+      "quantity": 1
     }
   ]
 }

@@ -14,6 +14,9 @@
           </span>
           <nuxt-link :class="b('basket')" to="/basket">
             <Icon name="basket" />
+            <span :class="b('quantity')">
+              {{ getQuantityBasket }}
+            </span>
           </nuxt-link>
           <nuxt-link :class="b('account')" to="/account">
             <Icon name="account" />
@@ -26,12 +29,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: "Header",
   data: () => {
     return {
       isActive: false
     }
+  },
+  computed: {
+    ...mapGetters('basket', ['getQuantityBasket'])
   },
   methods: {
     openSearchModal() {
@@ -115,12 +123,27 @@ export default {
     }
   }
   ::v-deep &__basket {
+    position: relative;
     @media (max-width: 480px) {
       svg {
         width: 25px;
         height: 25px;
       }
     }
+  }
+  &__quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e7ae12;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
   }
   ::v-deep &__account {
     @media (max-width: 480px) {

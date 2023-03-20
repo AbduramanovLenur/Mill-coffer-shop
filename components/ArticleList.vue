@@ -26,7 +26,7 @@ export default {
   name: "ArticleList",
   computed: {
     article() {
-      return this.$store.getters['api/getArticleContent'];
+      return this.$store.getters['product/getArticleContent'];
     }
   }
 }

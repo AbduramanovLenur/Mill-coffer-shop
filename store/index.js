@@ -1,8 +1,8 @@
-export const state = () => ({
+const state = () => ({
   isActiveClass: false
 })
 
-export const mutations = {
+const mutations = {
   SET_CLASS_ACTIVE(state) {
     if (state.isActiveClass) {
       state.isActiveClass = false;
@@ -14,12 +14,19 @@ export const mutations = {
   }
 }
 
-export const actions = {
+const actions = {
   addActiveClass({ commit }) {
     commit("SET_CLASS_ACTIVE");
   }
 }
 
-export const getters = {
+const getters = {
   getIsActiveClass: state => state.isActiveClass
+}
+
+export default {
+  state,
+  mutations,
+  actions,
+  getters
 }

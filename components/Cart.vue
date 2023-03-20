@@ -30,7 +30,11 @@
         <div :class="b('price')">
           {{ cart.price }} ₽
         </div>
-        <button :class="b('button cart-button')">
+        <button
+          :class="{'cart__button': b('button'), 'cart-button': 'cart-button', isActive: cart.isBasketActive}"
+          :disabled="cart.isBasketActive"
+          @click="multyFunction(cart)"
+        >
           {{ $t('toBasket') }}
         </button>
       </div>
@@ -39,6 +43,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: "Cart",
   props: {
@@ -53,6 +59,14 @@ export default {
         ru: 'г.',
         en: 'g.'
       }
+    }
+  },
+  methods: {
+    ...mapActions('basket', ['addCartToBasket']),
+    ...mapActions('product', ['addActiveClassButton']),
+    multyFunction(element) {
+      this.addCartToBasket(element);
+      this.addActiveClassButton({id: element.id, string: 'basket'});
     }
   }
 }
@@ -195,6 +209,9 @@ export default {
     padding: 13px;
     color: #FFFFFF;
     transition: 0.5s;
+    &.isActive {
+      opacity: 0.5;
+    }
   }
 }
 

@@ -40,10 +40,10 @@ export default {
   },
   computed: {
     catalogCart() {
-      return this.$store.getters['api/getVendingCatalog'];
+      return this.$store.getters['product/getVendingCatalog'];
     },
     productCart() {
-      return this.$store.getters['api/getVendingProduct'];
+      return this.$store.getters['product/getVendingProduct'];
     }
   },
   mounted() {

@@ -14,12 +14,12 @@ export default {
       { url: 'https://health-eat-top-default-rtdb.firebaseio.com/tea-bottom.json', nameSetFunction: 'SET_TEA_PRODUCT'}
     ];
 
-    if (store.getters['api/getTeaCatalog'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[0]);
+    if (store.getters['product/getTeaCatalog'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[0]);
     }
 
-    if (store.getters['api/getTeaProduct'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[1]);
+    if (store.getters['product/getTeaProduct'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[1]);
     }
   }
 }

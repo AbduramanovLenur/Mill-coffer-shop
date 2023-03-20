@@ -8,7 +8,15 @@
           </nuxt-link>
         </div>
         <div :class="b('languages')">
-          <nuxt-link :class="b('language')" v-for="locale in $i18n.locales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+          <nuxt-link
+            :class="b('language')"
+            v-for="locale in $i18n.locales"
+            :key="locale.code"
+            :to="switchLocalePath(locale.code)">
+            <span @click="localize(locale.code)">
+              {{ locale.name }}
+            </span>
+          </nuxt-link>
         </div>
         <Menu />
       </div>
@@ -17,8 +25,18 @@
 </template>
 
 <script>
+import { localize } from 'vee-validate';
+
 export default {
-  name: "Footer"
+  name: "Footer",
+  data: () => ({
+    lang: ''
+  }),
+  methods: {
+    localize(locale) {
+      return localize(locale)
+    }
+  }
 }
 </script>
 

@@ -13,8 +13,8 @@ export default {
       { url: 'https://news-content-6b2d0-default-rtdb.firebaseio.com/newsTab.json', nameSetFunction: 'SET_TAB_NEWS'}
     ];
 
-    if (store.getters['api/getTabNews'].length === 0) {
-      await store.dispatch('api/fetch', fetchApi[0]);
+    if (store.getters['product/getTabNews'].length === 0) {
+      await store.dispatch('product/fetch', fetchApi[0]);
     }
   }
 }

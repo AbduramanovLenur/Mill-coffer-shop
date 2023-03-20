@@ -49,6 +49,9 @@ export default {
       font-size: 20px;
       margin-bottom: 40px;
     }
+    @media (max-width: 540px) {
+      text-align: center;
+    }
   }
   &__form {
     position: relative;
@@ -110,6 +113,9 @@ export default {
       color: #F9B300;
       font-weight: 600;
       transition: 0.5s;
+    }
+    @media (max-width: 540px) {
+      text-align: center;
     }
   }
   &__coffee {

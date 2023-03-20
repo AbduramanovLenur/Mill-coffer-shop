@@ -66,5 +66,10 @@
   "addressKalinigrad7": "Panina 2a",
   "addressKalinigrad8": "Leninsky 8B",
   "addressKalinigrad9": "Aksakov 133",
-  "addressKalinigrad10": "Linden Alley 2"
+  "addressKalinigrad10": "Linden Alley 2",
+  "deleteAllButton": "Delete all",
+  "basketText": "in the basket",
+  "deliveryTitle": "Delivery",
+  "сalculateButton": "Calculate shipping",
+  "emptyBasket": "Cart is empty"
 }
