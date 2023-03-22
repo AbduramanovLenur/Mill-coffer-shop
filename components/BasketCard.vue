@@ -18,6 +18,12 @@
         @icrement="icrementQuantity(index)"
       />
     </transition-group>
+    <div :class="b('bottom')">
+      <Radio @getBank="$emit('getBank', $event)"/>
+      <div :class="b('total')">
+        {{ $t('total') }} {{ totalCost }} ₽
+      </div>
+    </div>
   </div>
 </template>
 
@@ -28,7 +34,7 @@ import declinate from '@/utils/declinate.js';
 export default {
   name: "BasketCard",
   methods: {
-    ...mapActions('basket', ['deleteCartFromBasket', 'deleteAllCart', 'icrementQuantity', 'decrementQuantity']),
+    ...mapActions('basket', ['deleteCartFromBasket', 'deleteAllCart', 'icrementQuantity', 'decrementQuantity', 'addTotalPrice']),
     ...mapActions('product', ['addActiveClassButton']),
     multyFunction() {
       this.deleteAllCart();
@@ -41,6 +47,19 @@ export default {
       return this.$i18n.locale === 'ru' ?
              declinate(2, ['товар', 'товара', 'товаров']) :
              'goods'
+    },
+    totalCost() {
+      let result = [];
+
+      for (let item of this.getBasketCart) {
+        let value = item.price * item.quantity;
+
+        result.push(value);
+      }
+      result = result.reduce((a, b) => a + b);
+
+      this.addTotalPrice(result);
+      return result;
     }
   }
 }
@@ -83,11 +102,6 @@ export default {
       margin-bottom: 25px;
     }
   }
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
   &__title {
     font-size: 40px;
     font-weight: 900;
@@ -125,5 +139,28 @@ export default {
       width: 120px;
     }
   }
-
-}</style>
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 15px;
+    }
+    @media (max-width: 480px) {
+      align-items: center;
+    }
+  }
+  &__total {
+    font-size: 18px;
+  }
+}
+</style>

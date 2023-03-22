@@ -6,7 +6,7 @@
           <Title :maxWidth="450">
             {{ $t('companyNews') }}
           </Title>
-          <nuxt-link :class="b('read')" to="/">
+          <nuxt-link :class="b('read')" to="/Blog">
             {{ $t('readAll') }}
           </nuxt-link>
         </div>

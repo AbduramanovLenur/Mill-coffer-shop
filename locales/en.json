@@ -70,6 +70,7 @@
   "deleteAllButton": "Delete all",
   "basketText": "in the basket",
   "deliveryTitle": "Delivery",
-  "сalculateButton": "Calculate shipping",
-  "emptyBasket": "Cart is empty"
+  "сalculateButton": "Pay",
+  "emptyBasket": "Cart is empty",
+  "total": "Total:"
 }

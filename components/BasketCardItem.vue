@@ -28,7 +28,7 @@
           @icrement="$emit('icrement')"
         />
         <div :class="b('price')">
-          {{ cart.price }} ₽
+          {{ price }} ₽
         </div>
       </div>
       <div :class="b('mobile-overlay')">
@@ -71,6 +71,11 @@ export default {
     multyFunction(element) {
       this.deleteCartBasket();
       this.addActiveClassButton({ id: element.id })
+    }
+  },
+  computed: {
+    price() {
+      return this.cart.price * this.cart.quantity;
     }
   }
 }

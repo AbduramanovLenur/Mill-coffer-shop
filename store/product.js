@@ -48,9 +48,9 @@ const mutations = {
       const stateKeys = state[key];
 
       if (clearAll === 'clear') {
-        stateKeys.forEach(elem => elem.isBasketActive = false)
+        stateKeys.forEach(elem => elem.isBasketActive = false);
       }
-      
+
       const element = stateKeys.find((obj) => obj.id === id);
 
       if (element) {
@@ -71,7 +71,34 @@ const actions = {
 
       commit(nameSetFunction, response);
     } catch (error) {
-      console.log(error);
+      this.$toast.error(error);
+    }
+  },
+  async productPayment(
+    {commit},
+    {name, country, surname, city, phone, streetHouse, email, postcode, companyName, orderComment, fullPrice, product, bank}
+    ) {
+    try {
+      const response = await this.$axios.$post('https://post-order-apple-shop-default-rtdb.firebaseio.com/:order.json', {
+        name: name,
+        surname: surname,
+        country: country,
+        city: city,
+        phone: phone,
+        streetHouse: streetHouse,
+        email: email,
+        postcode: postcode,
+        companyName: companyName,
+        orderComment: orderComment,
+        fullPrice: fullPrice,
+        product: product,
+        bank: bank
+      })
+
+      this.$toast.success("Покупка оформлена");
+      return response.message;
+    } catch (error) {
+      this.$toast.error(error?.response?.data?.message);
     }
   },
   addActiveClassButton({commit}, { id, string, clearAll }) {

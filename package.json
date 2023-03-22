@@ -20,6 +20,7 @@
     "vue-bem-cn": "^1.1.1",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
+    "vue-toastification": "^1.7.14",
     "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {

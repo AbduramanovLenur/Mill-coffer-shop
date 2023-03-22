@@ -4,8 +4,8 @@
       <div :class="b('inner')">
         <Breadcrumb :breadcrumbs="breadcrumb" :pxMargin="50" color="222222" />
         <div :class="b('overlay')" v-if="getQuantityBasket">
-          <BasketCard />
-          <BasketForm />
+          <BasketCard @getBank="getBank"/>
+          <BasketForm :bank="bank"/>
         </div>
         <div :class="b('empty')" v-else>
           <div :class="b('empty-ico')">
@@ -25,12 +25,16 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: "BasketContent",
-  data: () => {
-    return {
-      breadcrumb: [
-        { id: 1, text: { ru: 'Главная', en: 'Home' }, link: '/' },
-        { id: 2, text: { ru: 'Корзина', en: 'Basket' }, link: 'Basket' },
-      ],
+  data: () => ({
+    breadcrumb: [
+      { id: 1, text: { ru: 'Главная', en: 'Home' }, link: '/' },
+      { id: 2, text: { ru: 'Корзина', en: 'Basket' }, link: 'Basket' },
+    ],
+    bank: 'visa'
+  }),
+  methods: {
+    getBank(value) {
+      this.bank = value;
     }
   },
   computed: {

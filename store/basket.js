@@ -1,5 +1,7 @@
 const state = () => ({
-  basket: []
+  basket: [],
+  product: [],
+  total: 0
 })
 
 const mutations = {
@@ -14,9 +16,23 @@ const mutations = {
 
       if (!isProductExist) {
         state.basket.unshift(cart);
+        state.product.push({
+          title: cart.title,
+          subtitle: cart.subtitle,
+          quantity: cart.quantity,
+          price: cart.price * cart.quantity,
+          gram: cart.gram
+        });
       }
     } else {
       state.basket.unshift(cart);
+      state.product.push({
+        title: cart.title,
+        subtitle: cart.subtitle,
+        quantity: cart.quantity,
+        price: cart.price,
+        gram: cart.gram
+      });
     }
   },
   REMOVE_CART_BASKET(state, index) {
@@ -24,20 +40,20 @@ const mutations = {
   },
   REMOVE_ALL_CART(state) {
     state.basket = [];
+    state.product = [];
   },
   ICREMENT_QUANTITY(state, index) {
-    const price = state.basket[index].price / state.basket[index].quantity
-
     state.basket[index].quantity++;
-    state.basket[index].price = price * state.basket[index].quantity;
+    state.product[index].quantity++;
   },
   DECREMENT_QUANTITY(state, index) {
     if (state.basket[index].quantity > 1) {
-      const price = state.basket[index].price / state.basket[index].quantity
-
       state.basket[index].quantity--;
-      state.basket[index].price = price * state.basket[index].quantity;
+      state.product[index].quantity--;
     }
+  },
+  SET_TOTAL(state, total) {
+    state.total = total;
   }
 }
 
@@ -56,12 +72,17 @@ const actions = {
   },
   decrementQuantity({commit}, index) {
     commit('DECREMENT_QUANTITY', index);
+  },
+  addTotalPrice({commit}, total) {
+    commit('SET_TOTAL', total);
   }
 }
 
 const getters = {
   getBasketCart: state => state.basket,
-  getQuantityBasket: state => state.basket.length
+  getQuantityBasket: state => state.basket.length,
+  getPrice: state => state.total,
+  getProduct: state => state.product
 }
 
 export default {

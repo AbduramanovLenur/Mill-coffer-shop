@@ -20,10 +20,17 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 import inputs from '@/utils/inputs.js';
 
 export default {
   name: "BasketForm",
+  props: {
+    bank: {
+      type: String,
+      default: () => ''
+    }
+  },
   data: () => {
     return {
       formPay: {
@@ -37,17 +44,28 @@ export default {
         postcode: '',
         companyName: '',
         orderComment: ''
-      },
-      keyObject: []
+      }
     }
   },
   methods: {
+    ...mapActions('basket', ['deleteAllCart']),
+    ...mapActions('product', ['addActiveClassButton', 'productPayment']),
     submitForm() {
-      this.$refs.observer.validate();
-      console.log("Go to Server")
+      if (this.$refs.observer.validate()) {
+        this.productPayment({
+          ...this.formPay,
+          fullPrice: this.getPrice,
+          product: this.getProduct,
+          bank: this.bank,
+        });
+        this.deleteAllCart();
+        this.addActiveClassButton({clearAll: 'clear'});
+        this.$router.push('/');
+      }
     }
   },
   computed: {
+    ...mapGetters('basket', ['getPrice', 'getProduct']),
     inputs() {
       return inputs;
     }

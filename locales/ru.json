@@ -70,6 +70,7 @@
   "deleteAllButton": "Удалить все",
   "basketText": "в корзине",
   "deliveryTitle": "Доставка",
-  "сalculateButton": "Рассчитать доставку",
-  "emptyBasket": "Корзина пуста"
+  "сalculateButton": "Оплатить",
+  "emptyBasket": "Корзина пуста",
+  "total": "Итого:"
 }

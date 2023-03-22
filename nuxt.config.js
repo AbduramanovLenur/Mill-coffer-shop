@@ -49,6 +49,15 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    ["vue-toastification/nuxt", {
+      timeout: 2000,
+      transitionDuration: {
+        enter: 1000,
+        leave: 3000
+      },
+      draggable: false,
+      pauseOnHover: true,
+    }],
     [
       '@nuxtjs/i18n',
       {

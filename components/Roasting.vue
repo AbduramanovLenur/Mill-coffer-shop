@@ -6,7 +6,7 @@
           {{ $t('roastingTitle') }}
         </Title>
         <p :class="b('text')" v-html="$t('roastingText')"></p>
-        <nuxt-link :class="b('link')" to="#">
+        <nuxt-link :class="b('link')" to="/Blog">
           {{ $t('goCatalogBtn') }}
         </nuxt-link>
       </div>
