@@ -1,6 +1,7 @@
 {
   "product-top": [
     {
+      "name": "healthTop",
       "id": 1,
       "title": {
         "ru": "Цикорий и корень цикория",
@@ -10,6 +11,7 @@
       "alt": "product"
     },
     {
+      "name": "healthTop",
       "id": 2,
       "title": {
         "ru": "Ячменные напитки",
@@ -19,6 +21,7 @@
       "alt": "product"
     },
     {
+      "name": "healthTop",
       "id": 3,
       "title": {
         "ru": "Напитки для здоровья",
@@ -28,6 +31,7 @@
       "alt": "product"
     },
     {
+      "name": "healthTop",
       "id": 4,
       "title": {
         "ru": "Протеиновые смеси",
@@ -37,6 +41,7 @@
       "alt": "product"
     },
     {
+      "name": "healthTop",
       "id": 5,
       "title": {
         "ru": "Протеиновые смеси",
@@ -46,6 +51,7 @@
       "alt": "product"
     },
     {
+      "name": "healthTop",
       "id": 6,
       "title": {
         "ru": "Толокняные каши",
@@ -57,6 +63,7 @@
   ],
   "product-bottom": [
     {
+      "name": "healthBottom",
       "id": 7,
       "title": {
         "ru": "Наименование товара",
@@ -76,6 +83,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 8,
       "title": {
         "ru": "Наименование товара",
@@ -95,6 +103,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 9,
       "title": {
         "ru": "Наименование товара",
@@ -114,6 +123,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 10,
       "title": {
         "ru": "Наименование товара",
@@ -133,6 +143,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 11,
       "title": {
         "ru": "Наименование товара",
@@ -152,6 +163,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 12,
       "title": {
         "ru": "Наименование товара",
@@ -171,6 +183,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 13,
       "title": {
         "ru": "Наименование товара",
@@ -190,6 +203,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 14,
       "title": {
         "ru": "Наименование товара",
@@ -209,6 +223,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 15,
       "title": {
         "ru": "Наименование товара",
@@ -228,6 +243,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 16,
       "title": {
         "ru": "Наименование товара",
@@ -247,6 +263,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 17,
       "title": {
         "ru": "Наименование товара",
@@ -266,6 +283,7 @@
       "quantity": 1
     },
     {
+      "name": "healthBottom",
       "id": 18,
       "title": {
         "ru": "Наименование товара",
@@ -287,6 +305,7 @@
   ],
   "vending-top": [
     {
+      "name": "vendingTop",
       "id": 19,
       "title": {
         "ru": "Гранулированный кофе",
@@ -296,6 +315,7 @@
       "alt": "vending"
     },
     {
+      "name": "vendingTop",
       "id": 20,
       "title": {
         "ru": "Гранулированный цикорий",
@@ -305,6 +325,7 @@
       "alt": "vending"
     },
     {
+      "name": "vendingTop",
       "id": 21,
       "title": {
         "ru": "Зерновой кофе",
@@ -314,6 +335,7 @@
       "alt": "vending"
     },
     {
+      "name": "vendingTop",
       "id": 22,
       "title": {
         "ru": "Зерновой кофе",
@@ -323,6 +345,7 @@
       "alt": "vending"
     },
     {
+      "name": "vendingTop",
       "id": 23,
       "title": {
         "ru": "Гранулированный какао",
@@ -332,6 +355,7 @@
       "alt": "vending"
     },
     {
+      "name": "vendingTop",
       "id": 24,
       "title": {
         "ru": "Гранулированные кофейные напитки",
@@ -341,6 +365,7 @@
       "alt": "vending"
     },
     {
+      "name": "vendingTop",
       "id": 25,
       "title": {
         "ru": "Кофе порошкообразный",
@@ -350,6 +375,7 @@
       "alt": "vending"
     },
     {
+      "name": "vendingTop",
       "id": 26,
       "title": {
         "ru": "Сухое молоко гранулированное",
@@ -361,6 +387,7 @@
   ],
   "vending-bottom": [
     {
+      "name": "vendingBottom",
       "id": 27,
       "title": {
         "ru": "Наименование товара",
@@ -380,6 +407,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 28,
       "title": {
         "ru": "Наименование товара",
@@ -399,6 +427,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 29,
       "title": {
         "ru": "Наименование товара",
@@ -418,6 +447,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 30,
       "title": {
         "ru": "Наименование товара",
@@ -437,6 +467,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 31,
       "title": {
         "ru": "Наименование товара",
@@ -456,6 +487,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 32,
       "title": {
         "ru": "Наименование товара",
@@ -475,6 +507,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 33,
       "title": {
         "ru": "Наименование товара",
@@ -494,6 +527,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 34,
       "title": {
         "ru": "Наименование товара",
@@ -513,6 +547,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 35,
       "title": {
         "ru": "Наименование товара",
@@ -532,6 +567,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 36,
       "title": {
         "ru": "Наименование товара",
@@ -551,6 +587,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 37,
       "title": {
         "ru": "Наименование товара",
@@ -570,6 +607,7 @@
       "quantity": 1
     },
     {
+      "name": "vendingBottom",
       "id": 38,
       "title": {
         "ru": "Наименование товара",
@@ -591,6 +629,7 @@
   ],
   "tea-top": [
     {
+      "name": "teaTop",
       "id": 39,
       "title": {
         "ru": "Черный чай",
@@ -600,6 +639,7 @@
       "alt": "tea"
     },
     {
+      "name": "teaTop",
       "id": 40,
       "title": {
         "ru": "Зеленый чай",
@@ -609,7 +649,8 @@
       "alt": "tea"
     },
     {
-      "id": 3,
+      "name": "teaTop",
+      "id": 64,
       "title": {
         "ru": "Молочный улунг",
         "en": "Milk Oolong"
@@ -618,6 +659,7 @@
       "alt": "tea"
     },
     {
+      "name": "teaTop",
       "id": 41,
       "title": {
         "ru": "Молочный улунг",
@@ -627,6 +669,7 @@
       "alt": "tea"
     },
     {
+      "name": "teaTop",
       "id": 42,
       "title": {
         "ru": "Травяной чай",
@@ -636,6 +679,7 @@
       "alt": "tea"
     },
     {
+      "name": "teaTop",
       "id": 43,
       "title": {
         "ru": "Матча",
@@ -645,6 +689,7 @@
       "alt": "tea"
     },
     {
+      "name": "teaTop",
       "id": 44,
       "title": {
         "ru": "Пуэр",
@@ -654,6 +699,7 @@
       "alt": "tea"
     },
     {
+      "name": "teaTop",
       "id": 45,
       "title": {
         "ru": "Кофейные напитки",
@@ -665,6 +711,7 @@
   ],
   "tea-bottom": [
     {
+      "name": "teaBottom",
       "id": 46,
       "title": {
         "ru": "Наименование товара",
@@ -684,6 +731,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 47,
       "title": {
         "ru": "Наименование товара",
@@ -703,6 +751,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 48,
       "title": {
         "ru": "Наименование товара",
@@ -722,6 +771,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 49,
       "title": {
         "ru": "Наименование товара",
@@ -741,6 +791,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 50,
       "title": {
         "ru": "Наименование товара",
@@ -760,6 +811,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 51,
       "title": {
         "ru": "Наименование товара",
@@ -779,6 +831,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 52,
       "title": {
         "ru": "Наименование товара",
@@ -798,6 +851,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 53,
       "title": {
         "ru": "Наименование товара",
@@ -817,6 +871,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 54,
       "title": {
         "ru": "Наименование товара",
@@ -836,6 +891,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 55,
       "title": {
         "ru": "Наименование товара",
@@ -855,6 +911,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 56,
       "title": {
         "ru": "Наименование товара",
@@ -874,6 +931,7 @@
       "quantity": 1
     },
     {
+      "name": "teaBottom",
       "id": 57,
       "title": {
         "ru": "Наименование товара",

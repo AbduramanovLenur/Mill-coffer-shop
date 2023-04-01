@@ -21,7 +21,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+// import { mapGetters } from 'vuex'
+import { mapState } from 'pinia';
+import { useBasketStore } from '@/store/BasketStore.js';
 
 export default {
   name: "BasketContent",
@@ -38,7 +40,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('basket', ['getQuantityBasket'])
+    ...mapState(useBasketStore, ['getQuantityBasket'])
   }
 }
 </script>

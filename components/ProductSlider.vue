@@ -19,13 +19,13 @@
 import { ref } from 'vue';
 import Swiper from 'swiper/swiper-bundle.min';
 import 'swiper/swiper-bundle.min.css';
+import { mapState } from 'pinia';
+import { useProductStore } from '@/store/ProductStore.js';
 
 export default {
   name: "ProductSlider",
   computed: {
-    promo() {
-      return this.$store.getters['product/getPromo'];
-    }
+    ...mapState(useProductStore, ['promo'])
   },
   async mounted() {
     await this.$nextTick();

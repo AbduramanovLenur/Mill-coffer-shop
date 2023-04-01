@@ -13,20 +13,24 @@
 </template>
 
 <script>
+import { useProductStore } from '@/store/ProductStore.js';
+
 export default {
   name: 'IndexPage',
-  async asyncData({ store }) {
+  async asyncData({ $pinia }) {
+    const store = useProductStore($pinia);
+
     const fetchApi = [
-      { url: 'https://mill-cart-promotion-default-rtdb.firebaseio.com/promo.json', nameSetFunction: 'SET_PROMO' },
-      { url: 'https://news-content-6b2d0-default-rtdb.firebaseio.com/news.json', nameSetFunction: 'SET_ARTICLE' }
+      { url: 'https://mill-cart-promotion-default-rtdb.firebaseio.com/promo.json', name: 'promo'},
+      { url: 'https://news-content-6b2d0-default-rtdb.firebaseio.com/news.json', name: 'article' }
     ];
 
-    if (store.getters['product/getPromo'].length === 0) {
-      await store.dispatch('product/fetch', fetchApi[0]);
+    if (store.promo.length === 0) {
+      await store.fetchData(fetchApi[0]);
     }
 
-    if (Object.keys(store.getters['product/getArticleContent']).length === 0) {
-      await store.dispatch('product/fetch', fetchApi[1]);
+    if (Object.keys(store.article).length === 0) {
+      await store.fetchData(fetchApi[1]);
     }
   }
 }

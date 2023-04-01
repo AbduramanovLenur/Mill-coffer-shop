@@ -12,7 +12,8 @@
             :class="b('language')"
             v-for="locale in $i18n.locales"
             :key="locale.code"
-            :to="switchLocalePath(locale.code)">
+            :to="switchLocalePath(locale.code)"
+          >
             <span @click="localize(locale.code)">
               {{ locale.name }}
             </span>
@@ -36,6 +37,9 @@ export default {
     localize(locale) {
       return localize(locale)
     }
+  },
+  mounted() {
+    localize(this.$i18n.locale)
   }
 }
 </script>

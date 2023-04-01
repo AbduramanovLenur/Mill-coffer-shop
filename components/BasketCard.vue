@@ -10,7 +10,7 @@
     </div>
     <transition-group name="basket-transition" tag="ul" :class="b('list')">
       <BasketCardItem
-        v-for="(item, index) in getBasketCart"
+        v-for="(item, index) in basket"
         :key="item.id"
         :cart="item"
         @deleteCartBasket="deleteCartFromBasket(index)"
@@ -28,21 +28,23 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
+// import { mapActions } from 'vuex';
 import declinate from '@/utils/declinate.js';
+import { mapActions, mapState } from 'pinia';
+import { useBasketStore } from '@/store/BasketStore.js';
 
 export default {
   name: "BasketCard",
   methods: {
-    ...mapActions('basket', ['deleteCartFromBasket', 'deleteAllCart', 'icrementQuantity', 'decrementQuantity', 'addTotalPrice']),
-    ...mapActions('product', ['addActiveClassButton']),
+    ...mapActions(useBasketStore, ['addTotalPrice', 'icrementQuantity', 'decrementQuantity', 'deleteCartFromBasket', 'deleteAllCart']),
+    // ...mapActions('product', ['addActiveClassButton']),
     multyFunction() {
       this.deleteAllCart();
-      this.addActiveClassButton({clearAll: 'clear'});
+      // this.addActiveClassButton({clearAll: 'clear'});
     }
   },
   computed: {
-    ...mapGetters('basket', ['getQuantityBasket', 'getBasketCart']),
+    ...mapState(useBasketStore, ['getQuantityBasket', 'basket']),
     declinates() {
       return this.$i18n.locale === 'ru' ?
              declinate(2, ['товар', 'товара', 'товаров']) :
@@ -51,7 +53,7 @@ export default {
     totalCost() {
       let result = [];
 
-      for (let item of this.getBasketCart) {
+      for (let item of this.basket) {
         let value = item.price * item.quantity;
 
         result.push(value);

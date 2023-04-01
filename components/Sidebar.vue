@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ sidebar: b(''), isActive: isActive}">
+  <div :class="{ sidebar: b(''), isActive: isActiveClass}">
     <div :class="b('inner')">
       <SidebarMenu :class="b('menu')"/>
     </div>
@@ -7,12 +7,13 @@
 </template>
 
 <script>
+import { useActiveStore } from '@/store/ActiveStore.js';
+import { mapState } from 'pinia';
+
 export default {
   name: "Sidebar",
   computed: {
-    isActive() {
-      return this.$store.getters["getIsActiveClass"];
-    }
+    ...mapState(useActiveStore, ['isActiveClass'])
   }
 }
 </script>

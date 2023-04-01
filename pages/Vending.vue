@@ -6,20 +6,24 @@
 </template>
 
 <script>
+import { useProductStore } from '@/store/ProductStore.js';
+
 export default {
   name: "Vending",
-  async asyncData({ store }) {
+  async asyncData({ $pinia  }) {
+    const store = useProductStore($pinia);
+
     const fetchApi = [
-      { url: 'https://health-eat-top-default-rtdb.firebaseio.com/vending-top.json', nameSetFunction: 'SET_VENDING_CATALOG'},
-      { url: 'https://health-eat-top-default-rtdb.firebaseio.com/vending-bottom.json', nameSetFunction: 'SET_VENDING_PRODUCT'}
+      { url: 'https://health-eat-top-default-rtdb.firebaseio.com/vending-top.json', name: 'vendingCatalog'},
+      { url: 'https://health-eat-top-default-rtdb.firebaseio.com/vending-bottom.json', name: 'vendingProduct'}
     ];
 
-    if (store.getters['product/getVendingCatalog'].length === 0) {
-      await store.dispatch('product/fetch', fetchApi[0]);
+    if (store.vendingCatalog.length === 0) {
+      await store.fetchData(fetchApi[0]);
     }
 
-    if (store.getters['product/getVendingProduct'].length === 0) {
-      await store.dispatch('product/fetch', fetchApi[1]);
+    if (store.vendingProduct.length === 0) {
+      await store.fetchData(fetchApi[1]);
     }
   }
 }

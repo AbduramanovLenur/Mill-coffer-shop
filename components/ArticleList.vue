@@ -22,12 +22,13 @@
 </template>
 
 <script>
+import { mapState } from 'pinia';
+import { useProductStore } from '@/store/ProductStore.js';
+
 export default {
   name: "ArticleList",
   computed: {
-    article() {
-      return this.$store.getters['product/getArticleContent'];
-    }
+    ...mapState(useProductStore, ['article'])
   }
 }
 </script>

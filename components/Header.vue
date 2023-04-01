@@ -18,9 +18,9 @@
               {{ getQuantityBasket }}
             </span>
           </nuxt-link>
-          <nuxt-link :class="b('account')" to="/account">
+          <button :class="b('account')" @click="isOpenAllFiltersWith()">
             <Icon name="account" />
-          </nuxt-link>
+          </button>
         </div>
         <Burger :class="b('burger')"/>
       </div>
@@ -29,22 +29,27 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapState, mapActions } from 'pinia';
+import { useBasketStore } from '@/store/BasketStore.js';
+import { useSearchStore } from '@/store/SearchStore.js';
+import { useModalsStore } from '@/store/ModalsStore.js';
 
 export default {
   name: "Header",
-  data: () => {
-    return {
-      isActive: false
-    }
-  },
   computed: {
-    ...mapGetters('basket', ['getQuantityBasket'])
+    ...mapState(useBasketStore, ['getQuantityBasket']),
+    // ...mapState(useModalsStore, ['isOpenAuthModal', 'isOpenRegisterModal', 'isOpenForgotPasswordModal'])
   },
   methods: {
+    ...mapActions(useSearchStore, ['addIsActiveSearch']),
+    ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenRegisterModal', 'addIsOpenForgotPasswordModal']),
     openSearchModal() {
-      this.$store.dispatch('search/isActiveSearch');
+      this.addIsActiveSearch();
       document.body.style.overflowY = "hidden";
+    },
+    isOpenAllFiltersWith() {
+      if(document.documentElement.clientWidth >= 768) this.addIsOpenAuthModal()
+      else console.log('Ready')
     }
   }
 }

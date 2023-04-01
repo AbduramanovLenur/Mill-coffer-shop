@@ -33,7 +33,7 @@ export default {
     "@/plugins/aos.client.js",
     "@/plugins/bem-classnames.js",
     "@/plugins/map.js",
-    "@/plugins/vee-validate.js"
+    "@/plugins/vee-validate.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,7 +43,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    "@nuxtjs/svg"
+    "@nuxtjs/svg",
+    '@nuxtjs/composition-api/module',
+    ['@pinia/nuxt', { disableVuex: false }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ search: b(''), isActive: isActiveSearchModal }">
+  <div :class="{ search: b(''), isActive: isActiveSearch }">
     <div class="container">
       <div :class="b('inner')">
         <SearchForm />
@@ -13,18 +13,20 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'pinia';
+import { useSearchStore } from '@/store/SearchStore.js';
+
 export default {
   name: "Search",
   methods: {
+    ...mapActions(useSearchStore, ['addIsActiveSearch']),
     closeSearchModal() {
-      this.$store.dispatch('search/isActiveSearch', false);
+      this.addIsActiveSearch();
       document.body.style.overflowY = "scroll";
     }
   },
   computed: {
-    isActiveSearchModal() {
-      return this.$store.getters['search/getSearch'];
-    }
+    ...mapState(useSearchStore, ['isActiveSearch'])
   }
 }
 </script>

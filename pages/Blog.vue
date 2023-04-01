@@ -6,15 +6,19 @@
 </template>
 
 <script>
+import { useProductStore } from '@/store/ProductStore.js';
+
 export default {
   name: "Blog",
-  async asyncData({ store }) {
+  async asyncData({ $pinia  }) {
+    const store = useProductStore($pinia);
+
     const fetchApi = [
-      { url: 'https://news-content-6b2d0-default-rtdb.firebaseio.com/newsTab.json', nameSetFunction: 'SET_TAB_NEWS'}
+      { url: 'https://news-content-6b2d0-default-rtdb.firebaseio.com/newsTab.json', name: 'tabNews'}
     ];
 
-    if (store.getters['product/getTabNews'].length === 0) {
-      await store.dispatch('product/fetch', fetchApi[0]);
+    if (store.tabNews.length === 0) {
+      await store.fetchData(fetchApi[0]);
     }
   }
 }

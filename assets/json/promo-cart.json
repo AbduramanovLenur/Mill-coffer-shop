@@ -1,5 +1,6 @@
 {
   "promo": [{
+      "name": "promo",
       "id": 58,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-promo.png?alt=media&token=8c0b9200-1221-4736-aa90-7056abc3d0ea",
       "alt": "promotion",
@@ -25,6 +26,7 @@
       "quantity": 1
     },
     {
+      "name": "promo",
       "id": 59,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-promo.png?alt=media&token=8c0b9200-1221-4736-aa90-7056abc3d0ea",
       "alt": "promotion",
@@ -50,6 +52,7 @@
       "quantity": 1
     },
     {
+      "name": "promo",
       "id": 60,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-promo.png?alt=media&token=8c0b9200-1221-4736-aa90-7056abc3d0ea",
       "alt": "promotion",
@@ -75,6 +78,7 @@
       "quantity": 1
     },
     {
+      "name": "promo",
       "id": 61,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-promo.png?alt=media&token=8c0b9200-1221-4736-aa90-7056abc3d0ea",
       "alt": "promotion",
@@ -100,6 +104,7 @@
       "quantity": 1
     },
     {
+      "name": "promo",
       "id": 62,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-promo.png?alt=media&token=8c0b9200-1221-4736-aa90-7056abc3d0ea",
       "alt": "promotion",
@@ -125,6 +130,7 @@
       "quantity": 1
     },
     {
+      "name": "promo",
       "id": 63,
       "images": "https://firebasestorage.googleapis.com/v0/b/test-e8170.appspot.com/o/product-promo.png?alt=media&token=8c0b9200-1221-4736-aa90-7056abc3d0ea",
       "alt": "promotion",

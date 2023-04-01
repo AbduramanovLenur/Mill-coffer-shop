@@ -72,5 +72,12 @@
   "deliveryTitle": "Delivery",
   "сalculateButton": "Pay",
   "emptyBasket": "Cart is empty",
-  "total": "Total:"
+  "total": "Total:",
+  "signUp": "Sign Up",
+  "promoSubtitle": "Get discounts first!",
+  "registrationTitle": "Registration",
+  "loginAccountTitle": "Login to your personal account",
+  "passwordPlaceholder": "Password",
+  "signIn": "Sign In",
+  "forgotPassword": "Forgot your password?"
 }

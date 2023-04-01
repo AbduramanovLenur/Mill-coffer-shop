@@ -1,6 +1,6 @@
 <template>
   <ul :class="b('')">
-    <li :class="b('item')" v-for="item in menu" :key="item.id" @click="activeClass">
+    <li :class="b('item')" v-for="item in menu" :key="item.id" @click="addActiveClass">
       <nuxt-link :to="item.to" :class="b('link')">
         {{ item.title }}
       </nuxt-link>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { useActiveStore } from '@/store/ActiveStore.js';
+import { mapActions } from 'pinia';
 export default {
   name: "SidebarMenu",
   data: () => {
@@ -33,9 +35,7 @@ export default {
     }
   },
   methods: {
-    activeClass() {
-      this.$store.dispatch('addActiveClass');
-    }
+    ...mapActions(useActiveStore, ['addActiveClass'])
   }
 }
 </script>
@@ -45,6 +45,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   &__link {
     max-width: 300px;
   }

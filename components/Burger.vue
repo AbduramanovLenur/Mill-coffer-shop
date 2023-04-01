@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ burger: b(''), isActive: isActiveClass }" @click="activeClass">
+  <div :class="{ burger: b(''), isActive: isActiveClass }" @click="addActiveClass">
     <span></span>
     <span></span>
     <span></span>
@@ -7,17 +7,16 @@
 </template>
 
 <script>
+import { useActiveStore } from '@/store/ActiveStore.js';
+import { mapActions, mapState } from 'pinia';
+
 export default {
   name: "Burger",
   methods: {
-    activeClass() {
-      this.$store.dispatch('addActiveClass');
-    }
+    ...mapActions(useActiveStore, ['addActiveClass'])
   },
   computed: {
-    isActiveClass() {
-      return this.$store.getters["getIsActiveClass"];
-    }
+    ...mapState(useActiveStore, ['isActiveClass'])
   }
 }
 </script>

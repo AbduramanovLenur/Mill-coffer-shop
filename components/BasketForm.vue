@@ -20,8 +20,11 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
+// import { mapGetters } from 'vuex';
 import inputs from '@/utils/inputs.js';
+import { mapActions, mapState } from 'pinia';
+import { useProductStore } from '@/store/ProductStore.js';
+import { useBasketStore } from '@/store/BasketStore.js';
 
 export default {
   name: "BasketForm",
@@ -48,24 +51,28 @@ export default {
     }
   },
   methods: {
-    ...mapActions('basket', ['deleteAllCart']),
-    ...mapActions('product', ['addActiveClassButton', 'productPayment']),
-    submitForm() {
-      if (this.$refs.observer.validate()) {
+    ...mapActions(useProductStore, ['productPayment']),
+    ...mapActions(useBasketStore, ['deleteAllCart']),
+    // ...mapActions('product', ['addActiveClassButton']),
+    async submitForm() {
+      const isValid = await this.$refs.observer.validate();
+
+      if (isValid) {
         this.productPayment({
           ...this.formPay,
-          fullPrice: this.getPrice,
-          product: this.getProduct,
+          fullPrice: this.total,
+          product: this.product,
           bank: this.bank,
         });
         this.deleteAllCart();
-        this.addActiveClassButton({clearAll: 'clear'});
+        // this.addActiveClassButton({clearAll: 'clear'});
         this.$router.push('/');
+        this.$toast.success("Покупка оформлена");
       }
     }
   },
   computed: {
-    ...mapGetters('basket', ['getPrice', 'getProduct']),
+    ...mapState(useBasketStore, ['total', 'product']),
     inputs() {
       return inputs;
     }

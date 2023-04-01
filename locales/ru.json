@@ -72,5 +72,12 @@
   "deliveryTitle": "Доставка",
   "сalculateButton": "Оплатить",
   "emptyBasket": "Корзина пуста",
-  "total": "Итого:"
+  "total": "Итого:",
+  "signUp": "Регистрация",
+  "promoSubtitle": "Получайте скидки первым!",
+  "registrationTitle": "Регистрация",
+  "loginAccountTitle": "Войти в личный кабинет",
+  "passwordPlaceholder": "Введите пароль",
+  "signIn": "Войти",
+  "forgotPassword": "Забыли пароль?"
 }

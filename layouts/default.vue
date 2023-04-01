@@ -5,6 +5,7 @@
     <Footer />
     <Search />
     <Sidebar />
+    <Auth />
   </div>
 </template>
 

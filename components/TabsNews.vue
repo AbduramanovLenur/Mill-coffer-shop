@@ -5,12 +5,13 @@
 </template>
 
 <script>
+import { mapState } from 'pinia';
+import { useProductStore } from '@/store/ProductStore.js';
+
 export default {
   name: "TabsNews",
   computed: {
-    tabNews() {
-      return this.$store.getters['product/getTabNews'];
-    }
+    ...mapState(useProductStore, ['tabNews'])
   }
 }
 </script>
