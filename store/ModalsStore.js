@@ -3,19 +3,22 @@ import { defineStore } from 'pinia';
 export const useModalsStore = defineStore('modalsStore', {
   state: () => ({
     isOpenAuthModal: false,
+    isOpenAuthMobileModal: false,
     isOpenRegisterModal: false,
     isOpenForgotPasswordModal: false,
     scrollWidthPages: 0
   }),
   actions: {
-    addIsOpenAuthModal() {
-      this.calculateWidthScroll(this.isOpenAuthModal);
+    addIsOpenAuthModal(orientation) {
+      let value = (orientation === 'desktop') ? 'isOpenAuthModal' : 'isOpenAuthMobileModal';
 
-      if (this.isOpenAuthModal) {
-        this.isOpenAuthModal = false;
+      this.calculateWidthScroll(this[value]);
+
+      if (this[value]) {
+        this[value] = false;
         document.body.style.overflowY = 'auto';
       } else {
-        this.isOpenAuthModal = true;
+        this[value] = true;
         document.body.style.overflowY = 'hidden';
       }
     },

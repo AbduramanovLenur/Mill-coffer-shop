@@ -6,6 +6,7 @@
     <Search />
     <Sidebar />
     <Auth />
+    <AuthMobile />
   </div>
 </template>
 

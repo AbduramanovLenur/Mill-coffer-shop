@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'auth': b(''), 'isActive': isOpenAuthModal }" @click="addIsOpenAuthModal()">
+  <div :class="{ 'auth': b(''), 'isActive': isOpenAuthModal }" @click="addIsOpenAuthModal('desktop')">
     <div :class="b('overlay')" @click.stop>
       <div :class="b('box')">
         <div :class="b('wrapper')">
@@ -49,7 +49,7 @@
               >
                 <input
                   :class="{'auth__input': b('input'), 'isError': validationContext.errors[0]}"
-                  type="text"
+                  :type="isHide ? 'text' : 'password'"
                   :placeholder="$t('passwordPlaceholder')"
                   name="password"
                   :state="getValidationState(validationContext)"
@@ -58,6 +58,9 @@
                 <div :class="b('error')" v-if="validationContext.errors[0]">
                   {{ validationContext.errors[0] }}
                 </div>
+                <span :class="b('hide')" @click="changHidePassword()">
+                  <Icon name="hide"/>
+                </span>
               </ValidationProvider>
               <button :class="b('button')">
                 {{ $t('signIn') }}
@@ -68,7 +71,7 @@
             </form>
           </ValidationObserver>
         </div>
-        <div :class="b('close')" @click="addIsOpenAuthModal()">
+        <div :class="b('close')" @click="addIsOpenAuthModal('desktop')">
           <span></span>
           <span></span>
         </div>
@@ -87,7 +90,8 @@ export default {
     form: {
       email: '',
       password: ''
-    }
+    },
+    isHide: false
   }),
   methods: {
     ...mapActions(useModalsStore, ['addIsOpenAuthModal']),
@@ -97,6 +101,9 @@ export default {
       if (isValid) {
         console.log('Server GO')
       }
+    },
+    changHidePassword() {
+      this.isHide ? this.isHide = false : this.isHide = true;
     },
     getValidationState({ dirty, validated, valid = null }) {
       return dirty || validated ? valid : null
@@ -182,6 +189,7 @@ export default {
   &__observer {
     width: 100%;
     span {
+      position: relative;
       width: 100%;
     }
   }
@@ -226,14 +234,11 @@ export default {
   }
   &__forms {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 0px 30px 30px 0px;
     padding: 60px 11.7%;
     width: 100%;
-    @media (max-width: 960px) {
-      padding: 60px 7.7%;
+    @media (max-width: 1024px) {
+      padding: 30px 7.7%;
     }
   }
   &__close {
@@ -281,7 +286,7 @@ export default {
     border-radius: 5px;
     padding: 23px 60px;
     border: none;
-    @media (max-width: 960px) {
+    @media (max-width: 1024px) {
       padding: 23px 30px;
     }
     &.isError {
@@ -303,6 +308,10 @@ export default {
       margin-bottom: 10px;
       &:not(.isError) {
         margin-bottom: 30px;
+        & + .auth__hide {
+          top: 30%;
+          transform: translateY(-30%);
+        }
       }
       & + .auth__error {
         margin-bottom: 30px;
@@ -312,6 +321,13 @@ export default {
     &:focus {
       outline: none;
     }
+  }
+  &__hide {
+    width: initial !important;
+    position: absolute !important;
+    top: 20%;
+    right: 3%;
+    transform: translateY(-20%);
   }
   &__error {
     font-size: 16px;

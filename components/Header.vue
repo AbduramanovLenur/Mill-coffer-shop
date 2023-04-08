@@ -48,8 +48,8 @@ export default {
       document.body.style.overflowY = "hidden";
     },
     isOpenAllFiltersWith() {
-      if(document.documentElement.clientWidth >= 768) this.addIsOpenAuthModal()
-      else console.log('Ready')
+      if(document.documentElement.clientWidth >= 768) this.addIsOpenAuthModal('desktop')
+      else this.addIsOpenAuthModal('mobile')
     }
   }
 }
