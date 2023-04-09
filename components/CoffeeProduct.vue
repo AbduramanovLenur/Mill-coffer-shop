@@ -26,8 +26,8 @@ export default {
   data: () => ({
     breadcrumb: [
         { id: 1, text: {ru: 'Главная', en: 'Home'}, link: '/' },
-        { id: 2, text: {ru: 'Каталог товаров', en: 'Catalog'}, link: 'Catalog' },
-        { id: 3, text: {ru: 'Свежеобжаренный кофе', en: 'Freshly roasted coffee'}, link: 'Coffeee' }
+        { id: 2, text: {ru: 'Каталог товаров', en: 'Catalog'}, link: 'Coffee' },
+        { id: 2, text: {ru: 'Свежеобжаренный кофе', en: 'Freshly roasted coffee'}, link: 'Coffee' }
       ],
       productArray: [],
   }),

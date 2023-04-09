@@ -12,7 +12,7 @@
           <span :class="b('search-btn')" @click="openSearchModal">
             <Icon name="search-btn"/>
           </span>
-          <nuxt-link :class="b('basket')" to="/basket">
+          <nuxt-link :class="b('basket')" to="/Basket">
             <Icon name="basket" />
             <span :class="b('quantity')">
               {{ getQuantityBasket }}

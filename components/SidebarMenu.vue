@@ -19,17 +19,17 @@ export default {
         {
           id: 1,
           title: "Каталог товаров",
-          to: "catalog"
+          to: "Coffee"
         },
         {
           id: 2,
           title: "Блог",
-          to: "blog"
+          to: "Blog"
         },
         {
           id: 3,
           title: "Контакты",
-          to: "contact"
+          to: "Contact"
         }
       ]
     }

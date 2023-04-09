@@ -30,7 +30,7 @@ export default {
     return {
       breadcrumb: [
         { id: 1, text: {ru: 'Главная', en: 'Home'}, link: '/' },
-        { id: 2, text: {ru: 'Каталог товаров', en: 'Catalog'}, link: 'Catalog' },
+        { id: 2, text: {ru: 'Каталог товаров', en: 'Catalog'}, link: 'Coffee' },
         { id: 3, text: {ru: 'Чай и кофейные напитки', en: 'Tea and coffee drinks'}, link: 'Tea' }
       ],
       productArray: [],
