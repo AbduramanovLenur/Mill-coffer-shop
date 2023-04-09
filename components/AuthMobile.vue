@@ -136,6 +136,7 @@ export default {
     right: 40px;
     width: 40px;
     height: 40px;
+    cursor: pointer;
     @media (max-width: 480px) {
       top: 20px;
       right: 20px;
@@ -145,6 +146,7 @@ export default {
       width: 3px;
       height: 40px;
       background-color: #000;
+      cursor: pointer;
       &:first-child {
         transform: rotate(45deg);
       }

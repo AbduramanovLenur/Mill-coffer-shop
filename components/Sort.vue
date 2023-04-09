@@ -1,6 +1,6 @@
 <template>
   <div :class="b('')">
-    <div :class="b('filter-text')">{{ $t('sortTitle') }}</div>
+    <div :class="{'sort__filter-text': b('filter-text'), 'white_text': isWhite}">{{ $t('sortTitle') }}</div>
     <select :class="b('select')" @change="sortArray($event)">
       <option :class="b('option')" v-for="item in option" :value="item.value" :key="item.id"> {{ item.text[$i18n.locale] }} </option>
     </select>
@@ -16,6 +16,10 @@ export default {
     product: {
       type: Array,
       default: () => []
+    },
+    isWhite: {
+      type: Boolean,
+      default: () => false
     }
   },
   data: () => {
@@ -49,6 +53,9 @@ export default {
       font-weight: 500;
       line-height: 1.15;
       margin-bottom: 20px;
+      &.white_text {
+        color: #fff;
+      }
     }
   }
   &__select {

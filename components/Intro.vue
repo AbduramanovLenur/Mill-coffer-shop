@@ -10,7 +10,7 @@
           <div :class="b('picture')">
             <img src="@/assets/images/intro/cup-grains.png" alt="cup-grains">
           </div>
-          <nuxt-link :class="b('catalog')" to="/catalog">
+          <nuxt-link :class="b('catalog')" to="/Coffee">
             {{ $t('catalogBtn') }}
           </nuxt-link>
         </div>

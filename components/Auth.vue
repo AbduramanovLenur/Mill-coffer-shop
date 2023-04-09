@@ -1,20 +1,7 @@
 <template>
   <div :class="{ 'auth': b(''), 'isActive': isOpenAuthModal }" @click="addIsOpenAuthModal('desktop')">
     <div :class="b('overlay')" @click.stop>
-      <div :class="b('box')">
-        <div :class="b('wrapper')">
-          <h3 :class="b('title-register')">
-            {{ $t('registrationTitle') }}
-          </h3>
-          <div :class="b('subtitle')">
-            {{ $t('promoSubtitle') }}
-          </div>
-          <button :class="b('sign-up')">
-            {{ $t('signUp') }}
-          </button>
-        </div>
-        <img :class="b('decor')" src="@/assets/images/modals/decor.png" alt="decor">
-      </div>
+      <FormBoxModal />
       <div :class="b('forms')">
         <div :class="b('wrapper')">
           <div :class="b('logo')">
@@ -142,37 +129,7 @@ export default {
     width: 100%;
     max-width: 1380px;
   }
-  &__box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-    background-color: #F9B300;
-    border-radius: 30px 0px 0px 30px;
-    padding: 425px 30px 60px;
-    @media (max-width: 1200px) {
-      padding: 350px 30px 60px;
-    }
-  }
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
   &__title {
-    &-register {
-      font-size: 35px;
-      line-height: 1.25;
-      font-weight: 900;
-      color: #fff;
-      max-width: 220px;
-      margin-bottom: 25px;
-      @media (max-width: 960px) {
-        font-size: 30px;
-      }
-    }
     &-auth {
       font-size: 40px;
       font-weight: 900;
@@ -186,52 +143,6 @@ export default {
       }
     }
   }
-  &__observer {
-    width: 100%;
-    span {
-      position: relative;
-      width: 100%;
-    }
-  }
-  &__subtitle {
-    max-width: 320px;
-    line-height: 1.16;
-    margin-bottom: 90px;
-    color: #fff;
-    @media (max-width: 1200px) {
-      margin-bottom: 50px;
-    }
-    @media (max-width: 960px) {
-        font-size: 20px;
-    }
-  }
-  &__sign-up {
-    font-size: 25px;
-    line-height: 1.16;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 340px;
-    width: 100%;
-    height: 70px;
-    border: 2px solid #FFFFFF;
-    border-radius: 5px;
-    transition: 0.5s;
-    @media (max-width: 960px) {
-      height: 60px;
-    }
-  }
-  &__decor {
-    position: absolute;
-    top: -35px;
-    left: 0;
-    width: calc(100% + 120px);
-    max-width: initial;
-    @media (max-width: 1200px) {
-      width: calc(100% + 80px);
-    }
-  }
   &__forms {
     position: relative;
     border-radius: 0px 30px 30px 0px;
@@ -241,32 +152,17 @@ export default {
       padding: 30px 7.7%;
     }
   }
-  &__close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 35px;
-    right: 35px;
-    width: 25px;
-    height: 25px;
-    span {
-      position: absolute;
-      width: 3px;
-      height: 25px;
-      background-color: #000;
-      &:first-child {
-        transform: rotate(45deg);
-      }
-      &:last-child {
-        transform: rotate(-45deg);
-      }
-    }
-  }
   &__logo {
     margin-bottom: 50px;
     @media (max-width: 1200px) {
       margin-bottom: 20px;
+    }
+  }
+  &__observer {
+    width: 100%;
+    span {
+      position: relative;
+      width: 100%;
     }
   }
   &__form {
@@ -317,7 +213,6 @@ export default {
         margin-bottom: 30px;
       }
     }
-
     &:focus {
       outline: none;
     }
@@ -360,16 +255,34 @@ export default {
     margin-left: auto;
     border: none;
   }
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    span {
+      position: absolute;
+      width: 3px;
+      height: 25px;
+      background-color: #000;
+      cursor: pointer;
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
 
 @media (hover: hover) {
   .auth {
-    &__sign-up {
-      &:hover {
-        background-color: #fff;
-        color: #F9B300;
-      }
-    }
     &__button {
       &:hover {
         background-color: var(--hover-color-btn);

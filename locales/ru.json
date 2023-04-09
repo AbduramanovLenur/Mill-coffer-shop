@@ -79,5 +79,6 @@
   "loginAccountTitle": "Войти в личный кабинет",
   "passwordPlaceholder": "Введите пароль",
   "signIn": "Войти",
-  "forgotPassword": "Забыли пароль?"
+  "forgotPassword": "Забыли пароль?",
+  "coffeeTitle": "Свежеобжаренный кофе"
 }

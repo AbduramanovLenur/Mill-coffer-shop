@@ -79,5 +79,6 @@
   "loginAccountTitle": "Login to your personal account",
   "passwordPlaceholder": "Password",
   "signIn": "Sign In",
-  "forgotPassword": "Forgot your password?"
+  "forgotPassword": "Forgot your password?",
+  "coffeeTitle": "Freshly roasted coffee"
 }

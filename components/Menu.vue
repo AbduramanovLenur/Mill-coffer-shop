@@ -20,7 +20,7 @@ export default {
             ru: "Каталог товаров",
             en: "Catalog"
           },
-          link: "Catalog"
+          link: "Coffee"
         },
         {
           id: 2,

@@ -9,7 +9,7 @@
           {{ $t('saleText') }}
         </p>
         <ProductSlider :class="b('slider')"/>
-        <nuxt-link :class="b('all')" to="/">
+        <nuxt-link :class="b('all')" to="/Coffee">
           {{ $t('saleBtn') }}
         </nuxt-link>
       </div>

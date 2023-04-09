@@ -53,7 +53,8 @@ export const useProductStore = defineStore('productStore', {
     vendingProduct: [],
     teaCatalog: [],
     teaProduct: [],
-    tabNews: []
+    tabNews: [],
+    coffeeProduct: []
   }),
   getters: {},
   actions: {
