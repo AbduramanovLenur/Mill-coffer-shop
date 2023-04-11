@@ -37,8 +37,7 @@ import { useModalsStore } from '@/store/ModalsStore.js';
 export default {
   name: "Header",
   computed: {
-    ...mapState(useBasketStore, ['getQuantityBasket']),
-    // ...mapState(useModalsStore, ['isOpenAuthModal', 'isOpenRegisterModal', 'isOpenForgotPasswordModal'])
+    ...mapState(useBasketStore, ['getQuantityBasket'])
   },
   methods: {
     ...mapActions(useSearchStore, ['addIsActiveSearch']),

@@ -31,12 +31,16 @@ export const useModalsStore = defineStore('modalsStore', {
         document.body.style.overflowY = 'hidden';
       }
     },
-    addIsOpenForgotPasswordModal() {
-      if (this.isOpenForgotPasswordModal) {
-        this.isOpenForgotPasswordModal = false;
-        document.body.style.overflowY = 'auto'
+    addIsOpenForgotPasswordModal(orientation) {
+      let value = (orientation === 'desktop') ? 'isOpenForgotPasswordModal' : 'isOpenForgotPasswordMobileModal';
+
+      this.calculateWidthScroll(this[value]);
+
+      if (this[value]) {
+        this[value] = false;
+        document.body.style.overflowY = 'auto';
       } else {
-        this.isOpenForgotPasswordModal = true;
+        this[value] = true;
         document.body.style.overflowY = 'hidden';
       }
     },

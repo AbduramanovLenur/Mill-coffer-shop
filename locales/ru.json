@@ -80,5 +80,9 @@
   "passwordPlaceholder": "Введите пароль",
   "signIn": "Войти",
   "forgotPassword": "Забыли пароль?",
-  "coffeeTitle": "Свежеобжаренный кофе"
+  "coffeeTitle": "Свежеобжаренный кофе",
+  "forgotPasswordTitle": "Забыли пароль?",
+  "forgotPasswordSubtitle": "Введите вашу почту и мы пришлем вам проверочный код на почту",
+  "backSignInBtn": "Вернуться на страницу входа",
+  "getPhoneCodeBtn": "Получить код"
 }

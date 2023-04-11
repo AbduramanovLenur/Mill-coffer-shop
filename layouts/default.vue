@@ -5,8 +5,9 @@
     <Footer />
     <Search />
     <Sidebar />
-    <Auth />
-    <AuthMobile />
+    <AuthModal />
+    <AuthMobileModal />
+    <ForgotPasswordModal />
   </div>
 </template>
 

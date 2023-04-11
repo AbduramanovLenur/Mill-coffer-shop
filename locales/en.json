@@ -80,5 +80,9 @@
   "passwordPlaceholder": "Password",
   "signIn": "Sign In",
   "forgotPassword": "Forgot your password?",
-  "coffeeTitle": "Freshly roasted coffee"
+  "coffeeTitle": "Freshly roasted coffee",
+  "forgotPasswordTitle": "Forgot your password?",
+  "forgotPasswordSubtitle": "Enter your email and we will send you a verification code by email",
+  "backSignInBtn": "Back to sing in page",
+  "getPhoneCodeBtn": "To get the code"
 }
