@@ -6,6 +6,7 @@ export const useModalsStore = defineStore('modalsStore', {
     isOpenAuthMobileModal: false,
     isOpenRegisterModal: false,
     isOpenForgotPasswordModal: false,
+    isOpenForgotPasswordMobileModal: false,
     scrollWidthPages: 0
   }),
   actions: {

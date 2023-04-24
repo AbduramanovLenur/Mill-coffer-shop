@@ -8,6 +8,7 @@
     <AuthModal />
     <AuthMobileModal />
     <ForgotPasswordModal />
+    <ForgotPasswordMobileModal />
   </div>
 </template>
 

@@ -28,19 +28,19 @@
 </template>
 
 <script>
-// import { mapActions } from 'vuex';
 import declinate from '@/utils/declinate.js';
 import { mapActions, mapState } from 'pinia';
 import { useBasketStore } from '@/store/BasketStore.js';
+import { useProductStore } from '@/store/ProductStore.js';
 
 export default {
   name: "BasketCard",
   methods: {
     ...mapActions(useBasketStore, ['addTotalPrice', 'icrementQuantity', 'decrementQuantity', 'deleteCartFromBasket', 'deleteAllCart']),
-    // ...mapActions('product', ['addActiveClassButton']),
+    ...mapActions(useProductStore, ['addActiveClassButton']),
     multyFunction() {
       this.deleteAllCart();
-      // this.addActiveClassButton({clearAll: 'clear'});
+      this.addActiveClassButton({clearAll: 'clear'});
     }
   },
   computed: {

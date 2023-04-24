@@ -1,50 +1,8 @@
-const state = () => ({
-  promo: [],
-  healthProduct: [],
-  vendingProduct: [],
-  teaProduct: [],
-})
-
-const mutations = {
-  SET_ACTIVE_CLASS_BUTTON(state, { id, string, clearAll }) {
-    const stateKeysArrays = Object.keys(state).filter((key) => {
-      const keys = key !== 'article' && key !== 'healthCatalog' && key !== 'vendingCatalog' && key !== 'teaCatalog' && key !== 'tabNews';
-      if (keys) return key;
-    });
-
-    stateKeysArrays.forEach((key) => {
-      const stateKeys = state[key];
-
-      if (clearAll === 'clear') {
-        stateKeys.forEach(elem => elem.isBasketActive = false);
-      }
-
-      const element = stateKeys.find((obj) => obj.id === id);
-
-      if (element) {
-        if (string === 'basket') {
-          element.isBasketActive = true;
-        } else {
-          element.isBasketActive = false;
-        }
-      }
-    });
-  }
-}
-
-const actions = {
-  addActiveClassButton({ commit }, { id, string, clearAll }) {
-    commit('SET_ACTIVE_CLASS_BUTTON', { id, string, clearAll });
-  }
-}
-
-
 import { defineStore } from 'pinia';
 import axios from 'axios';
 
 export const useProductStore = defineStore('productStore', {
   state: () => ({
-    product: [],
     promo: [],
     article: {},
     healthCatalog: [],
@@ -58,12 +16,12 @@ export const useProductStore = defineStore('productStore', {
   }),
   getters: {},
   actions: {
-    async fetchData({url, name}) {
+    async fetchData({ url, name }) {
       try {
         const response = await axios.get(url);
         let value = [];
         if (name !== 'article') value = [...response.data]
-        else value = {...response.data}
+        else value = { ...response.data }
 
         this[name] = value;
       } catch (error) {
@@ -95,6 +53,30 @@ export const useProductStore = defineStore('productStore', {
         // this.$toast.error(error?.response?.data?.message);
         console.dir(error);
       }
+    },
+    addActiveClassButton({ id, string, clearAll }) {
+      const stateKeysArrays = Object.keys(this.$state).filter((key) => {
+        const keys = key !== 'article' && key !== 'healthCatalog' && key !== 'vendingCatalog' && key !== 'teaCatalog' && key !== 'tabNews';
+        if (keys) return key;
+      });
+
+      stateKeysArrays.forEach((key) => {
+        const stateKeys = this[key];
+
+        if (clearAll === 'clear') {
+          stateKeys.forEach(elem => elem.isBasketActive = false);
+        }
+
+        const element = stateKeys.find((obj) => obj.id === id);
+
+        if (element) {
+          if (string === 'basket') {
+            element.isBasketActive = true;
+          } else {
+            element.isBasketActive = false;
+          }
+        }
+      });
     }
   }
 });

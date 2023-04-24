@@ -20,7 +20,6 @@
 </template>
 
 <script>
-// import { mapGetters } from 'vuex';
 import inputs from '@/utils/inputs.js';
 import { mapActions, mapState } from 'pinia';
 import { useProductStore } from '@/store/ProductStore.js';
@@ -51,9 +50,8 @@ export default {
     }
   },
   methods: {
-    ...mapActions(useProductStore, ['productPayment']),
+    ...mapActions(useProductStore, ['productPayment', 'addActiveClassButton']),
     ...mapActions(useBasketStore, ['deleteAllCart']),
-    // ...mapActions('product', ['addActiveClassButton']),
     async submitForm() {
       const isValid = await this.$refs.observer.validate();
 
@@ -65,7 +63,7 @@ export default {
           bank: this.bank,
         });
         this.deleteAllCart();
-        // this.addActiveClassButton({clearAll: 'clear'});
+        this.addActiveClassButton({clearAll: 'clear'});
         this.$router.push('/');
         this.$toast.success("Покупка оформлена");
       }

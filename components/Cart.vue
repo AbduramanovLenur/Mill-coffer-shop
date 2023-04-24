@@ -43,9 +43,9 @@
 </template>
 
 <script>
-// import { mapActions } from 'vuex';
 import { mapActions } from 'pinia';
 import { useBasketStore } from '@/store/BasketStore.js';
+import { useProductStore } from '@/store/ProductStore.js';
 
 export default {
   name: "Cart",
@@ -65,10 +65,10 @@ export default {
   },
   methods: {
     ...mapActions(useBasketStore, ['addCartToBasket']),
-    // ...mapActions('product', ['addActiveClassButton']),
+    ...mapActions(useProductStore, ['addActiveClassButton']),
     multyFunction(element) {
       this.addCartToBasket(element);
-      // this.addActiveClassButton({id: element.id, string: 'basket'});
+      this.addActiveClassButton({id: element.id, string: 'basket'});
     }
   }
 }

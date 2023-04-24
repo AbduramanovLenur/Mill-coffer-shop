@@ -84,5 +84,10 @@
   "forgotPasswordTitle": "Forgot your password?",
   "forgotPasswordSubtitle": "Enter your email and we will send you a verification code by email",
   "backSignInBtn": "Back to sing in page",
-  "getPhoneCodeBtn": "To get the code"
+  "getPhoneCodeBtn": "To get the code",
+  "loginPersonalAccount": "Login to your personal account",
+  "registerBtn": "Register",
+  "registrationBtn": "Registration",
+  "subtitleForgotPassword": "Enter your email and we will send you verification code by email",
+  "backLogin": "Back to login page"
 }

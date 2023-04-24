@@ -5,7 +5,7 @@
         <img src="@/assets/images/modals/logo-mobile.png" alt="logo">
       </div>
       <h3 :class="b('title')">
-        Войти в личный кабинет
+        {{ $t('loginPersonalAccount') }}
       </h3>
       <ValidationObserver ref="observer" :class="b('observer')">
         <form :class="b('form')" @submit.prevent="submitForm">
@@ -31,32 +31,30 @@
            :rules="{ required: true, min: 3 }"
            v-slot="validationContext"
          >
-            <input
-             :class="{'auth-mobile-modal__input': b('input'), 'isError': validationContext.errors[0]}"
-             :type="isHide ? 'text' : 'password'"
-             :placeholder="$t('passwordPlaceholder')"
-             name="password"
-             :state="getValidationState(validationContext)"
-             v-model="form.password"
-            >
-            <div :class="b('error')" v-if="validationContext.errors[0]">
-             {{ validationContext.errors[0] }}
-            </div>
-            <span :class="b('hide')" @click="changHidePassword()">
-              <Icon name="hide"/>
-            </span>
+          <input
+            :class="{'auth-mobile-modal__input': b('input'), 'isError': validationContext.errors[0]}"
+            :type="isHide ? 'text' : 'password'"
+            :placeholder="$t('passwordPlaceholder')"
+            name="password"
+            :state="getValidationState(validationContext)"
+            v-model="form.password"
+          >
+          <div :class="b('error')" v-if="validationContext.errors[0]">
+            {{ validationContext.errors[0] }}
+          </div>
+          <span :class="b('hide')" @click="changHidePassword()">
+            <Icon name="hide"/>
+          </span>
         </ValidationProvider>
-        <button :class="b('sign-up')">
-          Зарегистрироваться
-        </button>
+        <MyButton />
         </form>
       </ValidationObserver>
       <div :class="b('buttons')">
         <button :class="b('registration')">
-          Регистрация
+          {{ $t('registrationBtn') }}
         </button>
-        <button :class="b('forgot-passwor')">
-          Забыли пароль?
+        <button :class="b('forgot-passwor')" @click="multyFunction('mobile')">
+          {{ $t('forgotPassword') }}
         </button>
       </div>
       <div :class="b('close')" @click="addIsOpenAuthModal('mobile')">
@@ -81,7 +79,7 @@ export default {
     isHide: false
   }),
   methods: {
-    ...mapActions(useModalsStore, ['addIsOpenAuthModal']),
+    ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenForgotPasswordModal']),
     async submitForm() {
       const isValid = await this.$refs.observer.validate();
 
@@ -94,6 +92,10 @@ export default {
     },
     getValidationState({ dirty, validated, valid = null }) {
       return dirty || validated ? valid : null
+    },
+    multyFunction(orientation) {
+      this.addIsOpenAuthModal(orientation);
+      this.addIsOpenForgotPasswordModal(orientation);
     }
   },
   computed: {
@@ -249,25 +251,6 @@ export default {
     top: 20%;
     right: 3%;
     transform: translateY(-20%);
-  }
-  &__sign-up {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 700px;
-    height: 70px;
-    width: 100%;
-    background-color: #F9B300;
-    border-radius: 5px;
-    padding: 20px;
-    @media (max-width: 480px) {
-      height: 60px;
-      padding: 10px
-    }
   }
   &__buttons {
     display: flex;

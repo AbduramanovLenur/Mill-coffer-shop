@@ -84,5 +84,10 @@
   "forgotPasswordTitle": "Забыли пароль?",
   "forgotPasswordSubtitle": "Введите вашу почту и мы пришлем вам проверочный код на почту",
   "backSignInBtn": "Вернуться на страницу входа",
-  "getPhoneCodeBtn": "Получить код"
+  "getPhoneCodeBtn": "Получить код",
+  "loginPersonalAccount": "Войти в личный кабинет",
+  "registerBtn": "Зарегистрироваться",
+  "registrationBtn": "Регистрация",
+  "subtitleForgotPassword": "Введите вашу почту и мы пришлем вам проверочный код на почту",
+  "backLogin": "Вернуться на страницу входа"
 }
