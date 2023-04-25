@@ -89,5 +89,9 @@
   "registerBtn": "Register",
   "registrationBtn": "Registration",
   "subtitleForgotPassword": "Enter your email and we will send you verification code by email",
-  "backLogin": "Back to login page"
+  "backLogin": "Back to login page",
+  "subtitleSignUp": "Register on the site to be the first to receive discounts and learn promotional offers!",
+  "namePlaceholder": "First and last name",
+  "phonePlaceholder": "Telephone",
+  "alreadyAccount": "Already have an account? &nbsp;<span>To come in</span>"
 }

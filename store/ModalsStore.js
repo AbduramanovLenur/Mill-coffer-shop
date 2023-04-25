@@ -5,6 +5,7 @@ export const useModalsStore = defineStore('modalsStore', {
     isOpenAuthModal: false,
     isOpenAuthMobileModal: false,
     isOpenRegisterModal: false,
+    isOpenRegisterMobileModal: false,
     isOpenForgotPasswordModal: false,
     isOpenForgotPasswordMobileModal: false,
     scrollWidthPages: 0
@@ -23,12 +24,16 @@ export const useModalsStore = defineStore('modalsStore', {
         document.body.style.overflowY = 'hidden';
       }
     },
-    addIsOpenRegisterModal() {
-      if (this.isOpenRegisterModal) {
-        this.isOpenRegisterModal = false;
-        document.body.style.overflowY = 'auto'
+    addIsOpenRegisterModal(orientation) {
+      let value = (orientation === 'desktop') ? 'isOpenRegisterModal' : 'isOpenRegisterMobileModal';
+
+      this.calculateWidthScroll(this[value]);
+
+      if (this[value]) {
+        this[value] = false;
+        document.body.style.overflowY = 'auto';
       } else {
-        this.isOpenRegisterModal = true;
+        this[value] = true;
         document.body.style.overflowY = 'hidden';
       }
     },

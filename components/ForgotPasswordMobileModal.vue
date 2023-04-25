@@ -4,9 +4,9 @@
       <div :class="b('picture')">
         <img src="@/assets/images/modals/logo-mobile.png" alt="logo">
       </div>
-      <h3 :class="b('title')">
+      <TitleModal :pxMargin="40">
         {{ $t('forgotPasswordTitle') }}
-      </h3>
+      </TitleModal>
       <div :class="b('subtitle')">
         {{ $t('subtitleForgotPassword') }}
       </div>
@@ -106,18 +106,6 @@ export default {
     margin-bottom: 140px;
     @media (max-width: 480px) {
       margin-bottom: 40px;
-    }
-  }
-  &__title {
-    font-size: 35px;
-    font-weight: 900;
-    line-height: 1.25;
-    margin-bottom: 40px;
-    max-width: 410px;
-    text-align: center;
-    @media (max-width: 480px) {
-      font-size: 28px;
-      margin-bottom: 20px;
     }
   }
   &__subtitle {

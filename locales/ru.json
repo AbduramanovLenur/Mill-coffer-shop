@@ -89,5 +89,9 @@
   "registerBtn": "Зарегистрироваться",
   "registrationBtn": "Регистрация",
   "subtitleForgotPassword": "Введите вашу почту и мы пришлем вам проверочный код на почту",
-  "backLogin": "Вернуться на страницу входа"
+  "backLogin": "Вернуться на страницу входа",
+  "subtitleSignUp": "Зарегистрируйтесь на сайте, чтобы первым получать скидки и узнавать акционные предложения!",
+  "namePlaceholder": "Имя и фамилия",
+  "phonePlaceholder": "Телефон",
+  "alreadyAccount": "Уже есть аккаунт? &nbsp;<span style='border-bottom: 1px solid #000'>Войти</span>"
 }

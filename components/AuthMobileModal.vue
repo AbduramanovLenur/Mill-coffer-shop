@@ -4,9 +4,9 @@
       <div :class="b('picture')">
         <img src="@/assets/images/modals/logo-mobile.png" alt="logo">
       </div>
-      <h3 :class="b('title')">
+      <TitleModal :pxMargin="60">
         {{ $t('loginPersonalAccount') }}
-      </h3>
+      </TitleModal>
       <ValidationObserver ref="observer" :class="b('observer')">
         <form :class="b('form')" @submit.prevent="submitForm">
           <ValidationProvider
@@ -50,10 +50,10 @@
         </form>
       </ValidationObserver>
       <div :class="b('buttons')">
-        <button :class="b('registration')">
+        <button :class="b('registration')" @click="multyFunctionSignUpModal('mobile')">
           {{ $t('registrationBtn') }}
         </button>
-        <button :class="b('forgot-passwor')" @click="multyFunction('mobile')">
+        <button :class="b('forgot-passwor')" @click="multyFunctionForgotPasswordModal('mobile')">
           {{ $t('forgotPassword') }}
         </button>
       </div>
@@ -79,7 +79,7 @@ export default {
     isHide: false
   }),
   methods: {
-    ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenForgotPasswordModal']),
+    ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenForgotPasswordModal', 'addIsOpenRegisterModal']),
     async submitForm() {
       const isValid = await this.$refs.observer.validate();
 
@@ -93,7 +93,11 @@ export default {
     getValidationState({ dirty, validated, valid = null }) {
       return dirty || validated ? valid : null
     },
-    multyFunction(orientation) {
+    multyFunctionSignUpModal(orientation) {
+      this.addIsOpenAuthModal(orientation);
+      this.addIsOpenRegisterModal(orientation);
+    },
+    multyFunctionForgotPasswordModal(orientation) {
       this.addIsOpenAuthModal(orientation);
       this.addIsOpenForgotPasswordModal(orientation);
     }
@@ -161,18 +165,6 @@ export default {
     margin-bottom: 70px;
     @media (max-width: 480px) {
       margin-bottom: 40px;
-    }
-  }
-  &__title {
-    font-size: 35px;
-    font-weight: 900;
-    line-height: 1.25;
-    margin-bottom: 60px;
-    max-width: 410px;
-    text-align: center;
-    @media (max-width: 480px) {
-      font-size: 28px;
-      margin-bottom: 20px;
     }
   }
   &__observer {

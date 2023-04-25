@@ -7,6 +7,7 @@
     <Sidebar />
     <AuthModal />
     <AuthMobileModal />
+    <SignUpMobileModal />
     <ForgotPasswordModal />
     <ForgotPasswordMobileModal />
   </div>
