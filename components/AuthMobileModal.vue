@@ -9,16 +9,18 @@
       </TitleModal>
       <ValidationObserver ref="observer" :class="b('observer')">
         <form :class="b('form')" @submit.prevent="submitForm">
-          <MyInputEmail v-model="form.email"/>
-          <MyInputPassword v-model="form.password"/>
-          <MyButton />
+          <MyInputEmail v-model="form.email" />
+          <MyInputPassword v-model="form.password" />
+          <MyButton>
+            {{ $t('signInBtn') }}
+          </MyButton>
         </form>
       </ValidationObserver>
       <div :class="b('buttons')">
         <button :class="b('registration')" @click="multyFunctionSignUpModal('mobile')">
           {{ $t('registrationBtn') }}
         </button>
-        <button :class="b('forgot-passwor')" @click="multyFunctionForgotPasswordModal('mobile')">
+        <button :class="b('forgot-passwor')">
           {{ $t('forgotPassword') }}
         </button>
       </div>
@@ -33,6 +35,7 @@
 <script>
 import { mapState, mapActions } from 'pinia';
 import { useModalsStore } from '@/store/ModalsStore.js';
+import { useAuthStore } from '@/store/AuthStore.js';
 
 export default {
   name: 'AuthMobileModal',
@@ -43,25 +46,34 @@ export default {
     }
   }),
   methods: {
-    ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenForgotPasswordModal', 'addIsOpenRegisterModal']),
+    ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenRegisterModal']),
+    ...mapActions(useAuthStore, ['login']),
     async submitForm() {
       const isValid = await this.$refs.observer.validate();
 
       if (isValid) {
-        console.log('Server GO')
+        this.login(this.form);
+        this.addIsOpenAuthModal('mobile');
+        if (this.errorAuth) {
+          this.$toast.error('Ошибка');
+        } else {
+          this.$toast.success('Вы вошли в аккаунт!');
+        }
+
+        this.form = {
+          email: '',
+          password: ''
+        }
       }
     },
     multyFunctionSignUpModal(orientation) {
       this.addIsOpenAuthModal(orientation);
       this.addIsOpenRegisterModal(orientation);
-    },
-    multyFunctionForgotPasswordModal(orientation) {
-      this.addIsOpenAuthModal(orientation);
-      this.addIsOpenForgotPasswordModal(orientation);
     }
   },
   computed: {
-    ...mapState(useModalsStore, ['isOpenAuthMobileModal'])
+    ...mapState(useModalsStore, ['isOpenAuthMobileModal']),
+    ...mapState(useAuthStore, ['errorAuth']),
   }
 }
 </script>

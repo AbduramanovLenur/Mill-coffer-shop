@@ -1,15 +1,15 @@
 <template>
-  <div :class="{ 'auth-modal': b(''), 'isActive': isOpenAuthModal }" @click="addIsOpenAuthModal('desktop')">
+  <div :class="{ 'sign-up-modal': b(''), 'isActive': isOpenRegisterModal }" @click="addIsOpenRegisterModal('desktop')">
     <div :class="b('overlay')" @click.stop>
       <FormBoxModal>
         <template v-slot:title>
-          {{ $t('registrationTitle') }}
+          {{ $t('welcomeTitle') }}
         </template>
         <template v-slot:subtitle>
-          {{ $t('promoSubtitle') }}
+          {{ $t('haveAccountSubtitle') }}
         </template>
         <template v-slot:btn>
-          {{ $t('signUp') }}
+          {{ $t('signInBtn') }}
         </template>
       </FormBoxModal>
       <div :class="b('forms')">
@@ -17,23 +17,22 @@
           <div :class="b('logo')">
             <img src="@/assets/images/modals/logo.png" alt="logo">
           </div>
-          <h3 :class="b('title-auth')">
-            {{ $t('loginAccountTitle') }}
+          <h3 :class="b('title-signUp')">
+            {{ $t('registrationTitle') }}
           </h3>
           <ValidationObserver ref="observer" :class="b('observer')">
             <form :class="b('form')" @submit.prevent="submitForm">
+              <MyInputNameModal v-model="form.name" />
               <MyInputEmailModal v-model="form.email" />
+              <MyInputPhoneModal v-model="form.phone" />
               <MyInputPasswordModal v-model="form.password" />
               <ButtonModal>
-                {{ $t('signIn') }}
+                {{ $t('registerBtn') }}
               </ButtonModal>
             </form>
           </ValidationObserver>
-          <button :class="b('forgot-password')">
-            {{ $t('forgotPassword') }}
-          </button>
         </div>
-        <div :class="b('close')" @click="addIsOpenAuthModal('desktop')">
+        <div :class="b('close')" @click="addIsOpenRegisterModal('desktop')">
           <span></span>
           <span></span>
         </div>
@@ -48,44 +47,48 @@ import { useModalsStore } from '@/store/ModalsStore.js';
 import { useAuthStore } from '@/store/AuthStore.js';
 
 export default {
-  name: 'AuthModal',
+  name: "SignUpModal",
   data: () => ({
     form: {
       email: '',
-      password: ''
-    }
+      password: '',
+      name: '',
+      phone: ''
+    },
   }),
   methods: {
-    ...mapActions(useModalsStore, ['addIsOpenAuthModal']),
-    ...mapActions(useAuthStore, ['login']),
+    ...mapActions(useModalsStore, ['addIsOpenRegisterModal', 'addIsOpenAuthModal']),
+    ...mapActions(useAuthStore, ['register']),
     async submitForm() {
       const isValid = await this.$refs.observer.validate();
 
       if (isValid) {
-        this.login(this.form);
-        this.addIsOpenAuthModal('desktop');
-        if (this.errorAuth) {
+        this.register(this.form);
+        this.addIsOpenRegisterModal('desktop');
+        if (this.errorRegister) {
           this.$toast.error('Ошибка');
         } else {
-          this.$toast.success('Вы вошли в аккаунт!');
+          this.$toast.success('Пользователь зарегистрирован!');
         }
 
         this.form = {
           email: '',
-          password: ''
+          password: '',
+          name: '',
+          phone: ''
         }
       }
     }
   },
   computed: {
-    ...mapState(useModalsStore, ['isOpenAuthModal']),
-    ...mapState(useAuthStore, ['errorAuth']),
+    ...mapState(useModalsStore, ['isOpenRegisterModal']),
+    ...mapState(useAuthStore, ['errorRegister'])
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.auth-modal {
+.sign-up-modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,30 +117,29 @@ export default {
   &__forms {
     position: relative;
     border-radius: 0px 30px 30px 0px;
-    padding: 60px 11.7%;
+    padding: 20px 11.7%;
     width: 100%;
     @media (max-width: 1024px) {
-      padding: 30px 7.7%;
+      padding: 20px 7.7%;
     }
   }
   &__logo {
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
     max-width: 155px;
     @media (max-width: 1200px) {
       margin-bottom: 20px;
     }
   }
   &__title {
-    &-auth {
+    &-sign-up {
       font-size: 40px;
       font-weight: 900;
       line-height: 1.25;
-      margin: 0 auto 70px;
+      margin: 0 auto 20px;
       max-width: 460px;
       text-align: center;
       @media (max-width: 1200px) {
         font-size: 30px;
-        margin: 0 auto 40px;
       }
     }
   }
@@ -156,15 +158,6 @@ export default {
     align-items: center;
     max-width: 680px;
     width: 100%;
-  }
-  &__forgot-password {
-    display: block;
-    font-size: 20px;
-    line-height: 1.15;
-    max-width: 160px;
-    margin-left: auto;
-    border: none;
-    border-bottom: 1px solid #000;
   }
   &__close {
     display: flex;

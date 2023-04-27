@@ -93,5 +93,8 @@
   "subtitleSignUp": "Register on the site to be the first to receive discounts and learn promotional offers!",
   "namePlaceholder": "First and last name",
   "phonePlaceholder": "Telephone",
-  "alreadyAccount": "Already have an account? &nbsp;<span style='border-bottom: 1px solid #000'>To come in</span>"
+  "alreadyAccount": "Already have an account? &nbsp;<span style='border-bottom: 1px solid #000'>To come in</span>",
+  "welcomeTitle": "Welcome!",
+  "haveAccountSubtitle": "Already have an account?",
+  "signInBtn": "Sign In"
 }

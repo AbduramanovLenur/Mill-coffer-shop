@@ -1,18 +1,17 @@
 <template>
   <ValidationProvider
-    name="phone"
-    :rules="{ required: true, min: 3 }"
+    name="email"
+    :rules="{ required: true, min: 3, email: true }"
     v-slot="validationContext"
   >
     <input
-      :class="{'my-input-phone': b('input'), 'isError': validationContext.errors[0]}"
-      type="text"
-      placeholder='+### (##) ###-##-##'
-      name="phone"
+      :class="{'my-input-email-modal': b('input'), 'isError': validationContext.errors[0]}"
+      type="email"
+      placeholder="Email"
+      name="email"
       :state="getValidationState(validationContext)"
       :value="value"
       @input="$emit('input', $event.target.value)"
-      v-mask="'+### (##) ###-##-##'"
     >
     <div :class="b('error')" v-if="validationContext.errors[0]">
       {{ validationContext.errors[0] }}
@@ -22,7 +21,7 @@
 
 <script>
 export default {
-  name: "MyInputPhone",
+  name: "MyInputEmailModal",
   props: {
     value: {
       type: [String, Number],
@@ -38,18 +37,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.my-input-phone {
-  font-size: 16px;
-  line-height: 1.31;
-  max-width: 700px;
+.my-input-email-modal {
+  font-size: 20px;
+  line-height: 1.15;
+  max-width: 680px;
   width: 100%;
   height: 70px;
-  background-color: #F3F3F3;
+  background-color: #F6F6F6;
   border-radius: 5px;
-  padding: 25px 40px;
+  padding: 23px 60px;
   border: none;
   margin-bottom: 10px;
-  @media (max-width: 960px) {
+  @media (max-width: 1024px) {
     padding: 23px 30px;
   }
   &.isError {
@@ -61,7 +60,7 @@ export default {
   &:not(.isError) {
     margin-bottom: 20px;
   }
-  & + .my-input-phone__error {
+  & + .my-input-email-modal__error {
     margin-bottom: 20px;
   }
   &:focus {

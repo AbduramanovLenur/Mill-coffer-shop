@@ -1,7 +1,17 @@
 <template>
   <div :class="{ 'forgot-password-modal': b(''), 'isActive': isOpenForgotPasswordModal }" @click="addIsOpenForgotPasswordModal('desktop')">
     <div :class="b('overlay')" @click.stop>
-      <FormBoxModal />
+      <FormBoxModal>
+        <template v-slot:title>
+          {{ $t('registrationTitle') }}
+        </template>
+        <template v-slot:subtitle>
+          {{ $t('promoSubtitle') }}
+        </template>
+        <template v-slot:btn>
+          {{ $t('signUp') }}
+        </template>
+      </FormBoxModal>
       <div :class="b('forms')">
         <div :class="b('wrapper')">
           <div :class="b('logo')">

@@ -7,10 +7,9 @@
 
 <script>
 export default {
-  name: "Basket"
+  name: "Basket",
+  middleware: ['auth']
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

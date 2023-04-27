@@ -18,8 +18,11 @@
               {{ getQuantityBasket }}
             </span>
           </nuxt-link>
-          <button :class="b('account')" @click="isOpenAllFiltersWith()">
+          <button :class="b('account')" @click="isOpenAllFiltersWith()" v-if="!token">
             <Icon name="account" />
+          </button>
+          <button :class="b('logout')" @click="logoutUser()" v-else>
+            <Icon name="logout"/>
           </button>
         </div>
         <Burger :class="b('burger')"/>
@@ -33,15 +36,18 @@ import { mapState, mapActions } from 'pinia';
 import { useBasketStore } from '@/store/BasketStore.js';
 import { useSearchStore } from '@/store/SearchStore.js';
 import { useModalsStore } from '@/store/ModalsStore.js';
+import { useAuthStore } from '@/store/AuthStore.js';
 
 export default {
   name: "Header",
   computed: {
-    ...mapState(useBasketStore, ['getQuantityBasket'])
+    ...mapState(useBasketStore, ['getQuantityBasket']),
+    ...mapState(useAuthStore, ['token'])
   },
   methods: {
     ...mapActions(useSearchStore, ['addIsActiveSearch']),
     ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenRegisterModal', 'addIsOpenForgotPasswordModal']),
+    ...mapActions(useAuthStore, ['logout']),
     openSearchModal() {
       this.addIsActiveSearch();
       document.body.style.overflowY = "hidden";
@@ -49,6 +55,10 @@ export default {
     isOpenAllFiltersWith() {
       if(document.documentElement.clientWidth >= 768) this.addIsOpenAuthModal('desktop')
       else this.addIsOpenAuthModal('mobile')
+    },
+    logoutUser() {
+      this.logout();
+      this.$router.push('/');
     }
   }
 }
@@ -112,6 +122,7 @@ export default {
   }
   &__btns {
     display: flex;
+    align-items: center;
     gap: 53px;
     margin-left: 25px;
     @media (max-width: 640px) {
@@ -156,6 +167,11 @@ export default {
         height: 25px;
       }
     }
+  }
+  &__logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

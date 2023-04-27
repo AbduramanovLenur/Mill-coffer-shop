@@ -93,5 +93,8 @@
   "subtitleSignUp": "Зарегистрируйтесь на сайте, чтобы первым получать скидки и узнавать акционные предложения!",
   "namePlaceholder": "Имя и фамилия",
   "phonePlaceholder": "Телефон",
-  "alreadyAccount": "Уже есть аккаунт? &nbsp;<span style='border-bottom: 1px solid #000'>Войти</span>"
+  "alreadyAccount": "Уже есть аккаунт? &nbsp;<span style='border-bottom: 1px solid #000'>Войти</span>",
+  "welcomeTitle": "Добро пожаловать!",
+  "haveAccountSubtitle": "Уже есть аккаунт?",
+  "signInBtn": "Войти"
 }

@@ -7,14 +7,12 @@
     <Sidebar />
     <AuthModal />
     <AuthMobileModal />
+    <SignUpModal />
     <SignUpMobileModal />
-    <ForgotPasswordModal />
-    <ForgotPasswordMobileModal />
   </div>
 </template>
 
 <script>
-
 export default {
   name: "Default"
 }

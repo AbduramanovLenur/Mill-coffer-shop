@@ -35,6 +35,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss">
 .background-group {
   background-image: url("@/assets/images/background.png");

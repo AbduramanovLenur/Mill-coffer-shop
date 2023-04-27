@@ -16,7 +16,9 @@
           <MyInputEmail v-model="form.email" />
           <MyInputPhone v-model="form.phone" />
           <MyInputPassword v-model="form.password" />
-          <MyButton />
+          <MyButton>
+            {{ $t('registerBtn') }}
+          </MyButton>
         </form>
       </ValidationObserver>
       <button :class="b('back-login')" @click="multyFunction('mobile')" v-html="$t('alreadyAccount')"></button>
@@ -31,6 +33,7 @@
 <script>
 import { mapState, mapActions } from 'pinia';
 import { useModalsStore } from '@/store/ModalsStore.js';
+import { useAuthStore } from '@/store/AuthStore.js';
 
 export default {
   name: "SignUpMobileModal",
@@ -44,11 +47,25 @@ export default {
   }),
   methods: {
     ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenRegisterModal']),
+    ...mapActions(useAuthStore, ['register']),
     async submitForm() {
       const isValid = await this.$refs.observer.validate();
 
       if (isValid) {
-        console.log('Server GO')
+        this.register(this.form);
+        this.addIsOpenRegisterModal('mobile');
+        if (this.errorRegister) {
+          this.$toast.error('Ошибка');
+        } else {
+          this.$toast.success('Пользователь зарегистрирован!');
+        }
+
+        this.form = {
+          email: '',
+          password: '',
+          name: '',
+          phone: ''
+        }
       }
     },
     multyFunction(orientation) {
@@ -57,7 +74,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(useModalsStore, ['isOpenRegisterMobileModal'])
+    ...mapState(useModalsStore, ['isOpenRegisterMobileModal']),
+    ...mapState(useAuthStore, ['errorRegister'])
   }
 }
 </script>

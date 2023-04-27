@@ -34,6 +34,7 @@ export default {
     "@/plugins/bem-classnames.js",
     "@/plugins/map.js",
     "@/plugins/vee-validate.js",
+    "@/plugins/v-mask.js"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -80,7 +81,8 @@ export default {
         lazy: true,
         detectBrowserLanguage: false
       }
-    ]
+    ],
+    '@nuxtjs/toast',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

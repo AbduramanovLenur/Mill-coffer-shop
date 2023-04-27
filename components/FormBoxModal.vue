@@ -2,13 +2,13 @@
   <div :class="b('')">
     <div :class="b('wrapper')">
       <h3 :class="b('title-register')">
-        {{ $t('registrationTitle') }}
+        <slot name="title"></slot>
       </h3>
       <div :class="b('subtitle')">
-        {{ $t('promoSubtitle') }}
+        <slot name="subtitle"></slot>
       </div>
-      <button :class="b('sign-up')">
-        {{ $t('signUp') }}
+      <button :class="b('sign-up')" @click="multyFunction('desktop')">
+        <slot name="btn"></slot>
       </button>
     </div>
     <img :class="b('decor')" src="@/assets/images/modals/decor.png" alt="decor">
@@ -16,8 +16,18 @@
 </template>
 
 <script>
+import { mapActions } from 'pinia';
+import { useModalsStore } from '@/store/ModalsStore.js';
+
 export default {
-  name: 'FormBox'
+  name: 'FormBox',
+  methods: {
+    ...mapActions(useModalsStore, ['addIsOpenAuthModal', 'addIsOpenRegisterModal']),
+    multyFunction(orientation) {
+      this.addIsOpenAuthModal(orientation);
+      this.addIsOpenRegisterModal(orientation);
+    }
+  }
 }
 </script>
 
@@ -46,7 +56,7 @@ export default {
       line-height: 1.25;
       font-weight: 900;
       color: #fff;
-      max-width: 220px;
+      max-width: 330px;
       margin-bottom: 25px;
 
       @media (max-width: 960px) {

@@ -1,6 +1,6 @@
 <template>
   <button :class="b()">
-    {{ $t('registerBtn') }}
+    <slot></slot>
   </button>
 </template>
 
