@@ -13,6 +13,7 @@
       @input="$emit('input', $event.target.value)"
       :name="input.key"
       :state="getValidationState(validationContext)"
+      v-mask="maskInput"
     >
     <div :class="b('error')" v-if="validationContext.errors[0]">
       {{ validationContext.errors[0] }}
@@ -37,6 +38,11 @@ export default {
   methods: {
     getValidationState({ dirty, validated, valid = null }) {
       return dirty || validated ? valid : null
+    }
+  },
+  computed: {
+    maskInput() {
+      return this.input.key === 'phone' ? '+### (##) ###-##-##' : '';
     }
   }
 }

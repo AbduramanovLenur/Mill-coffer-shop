@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { auth } from '../plugins/firebase';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification } from 'firebase/auth';
 
 export const useAuthStore = defineStore('authStore', {
   state: () => ({
@@ -38,7 +38,9 @@ export const useAuthStore = defineStore('authStore', {
     },
     async register({email, password, name, phone}) {
       try {
-        await createUserWithEmailAndPassword(auth, email, password);
+        await createUserWithEmailAndPassword(auth, email, password).then(data => {
+          sendEmailVerification(auth.currentUser)
+        });
         this.user = auth.currentUser;
 
         console.dir("Пользователь зарегистрирован");

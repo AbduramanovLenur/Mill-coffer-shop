@@ -45,7 +45,7 @@ const inputs = [
       ru: "Телефон",
       en: "Phone"
     },
-    type: "number",
+    type: "text",
     required: true,
     key: 'phone'
   },

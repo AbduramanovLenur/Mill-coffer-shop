@@ -1,69 +1,31 @@
-# coffee-page
+# Проект: "Mill":
 
-## Build Setup
+* Многостраничный SSS сайт e-commerce кофе и чайных продуктов ;
+* Сайт адаптирован под мониторы комьютеров, ноутбуков, планшетов и телефонов;
+* На сайте были использованы технологии: HTML, CSS, SCSS/SASS, JavaScript(EcmaScript6), Vue JS, Nuxt JS, глобальное хранилище Pinia, Nuxt Router;
+* Были использованы API: @nuxtjs/axios, @nuxtjs/firebase, @nuxtjs/i18n, v-mask, vee-validate, @nuxtjs/toast, aos, pinia, swiper, vue-bem-cn, vue-toastification, vue2-google-maps, @nuxtjs/svg;
+* Сайт мультиязычный, имеется два языка: Русский и Английский;
+* Авторизация и регистрация сайта реализована через Firebase, а также присутствует верификация почты через firebase;
+* При заходе на страницу корзины, если пользователь не авторизован, то перекидывает на главную страницу (middleware)
+* Все данные карточек приходят с БД Firebase;
+* Присутсвует интерактивная карта с динамическами балунами городов;
+* Сайт имеет 10 страниц;
 
-```bash
-# install dependencies
-$ npm install
+<br>
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# Project: "Mill":
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+* Multi-page SSS e-commerce site for coffee and tea products;
+* The site is adapted for monitors of computers, laptops, tablets and phones;
+* Technologies used on the site: HTML, CSS, SCSS/SASS, JavaScript(EcmaScript6), Vue JS, Nuxt JS, Pinia Global Storage, Nuxt Router;
+* APIs used: @nuxtjs/axios, @nuxtjs/firebase, @nuxtjs/i18n, v-mask, vee-validate, @nuxtjs/toast, aos, pinia, swiper, vue-bem-cn, vue-toastification, vue2 -google-maps, @nuxtjs/svg;
+* The site is multilingual, there are two languages: Russian and English;
+* Authorization and registration of the site is implemented through Firebase, and there is also mail verification through firebase;
+* When entering the cart page, if the user is not logged in, then redirects to the main page (middleware)
+* All card data comes from the Firebase database;
+* There is an interactive map with dynamic city balloons;
+* The site has 10 pages;
 
-# generate static project
-$ npm run generate
-```
+<br>
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+## 🔗 https://mill-nuxt-shop.netlify.app/
