@@ -54,12 +54,6 @@ export default {
       if (isValid) {
         this.login(this.form);
         this.addIsOpenAuthModal('mobile');
-        if (this.errorAuth) {
-          this.$toast.error('Ошибка');
-        } else {
-          this.$toast.success('Вы вошли в аккаунт!');
-        }
-
         this.form = {
           email: '',
           password: ''
@@ -72,8 +66,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(useModalsStore, ['isOpenAuthMobileModal']),
-    ...mapState(useAuthStore, ['errorAuth']),
+    ...mapState(useModalsStore, ['isOpenAuthMobileModal'])
   }
 }
 </script>

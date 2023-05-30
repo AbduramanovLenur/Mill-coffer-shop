@@ -6,8 +6,6 @@ export const useAuthStore = defineStore('authStore', {
   state: () => ({
     token: false,
     user: null,
-    errorRegister: false,
-    errorAuth: false
   }),
   actions: {
     async login({email, password}) {
@@ -16,20 +14,24 @@ export const useAuthStore = defineStore('authStore', {
         this.token = true;
         this.user = auth.currentUser;
 
-        console.dir("Вы вошли в аккаунт");
+        this.$nuxt.$toast.success('Вы вошли в аккаунт!');
+        console.debug("Вы вошли в аккаунт");
       } catch (error) {
         switch (error.code) {
           case 'auth/user-not-found':
-            console.dir('User not found');
-            this.errorAuth = true;
+            this.$nuxt.$toast.error('Пользователь не найден!');
+
+            console.debug('User not found');
             break;
           case 'auth/wrong-password':
-            console.dir('Wrond password');
-            this.errorAuth = true;
+            this.$nuxt.$toast.error('Неправильный пароль!');
+
+            console.debug('Wrond password');
             break;
           default:
-            console.dir("Something went wrong");
-            this.errorAuth = true;
+            this.$nuxt.$toast.error('Что-то пошло не так!');
+
+            console.debug("Something went wrong");
             break;
         }
 
@@ -43,28 +45,29 @@ export const useAuthStore = defineStore('authStore', {
         });
         this.user = auth.currentUser;
 
-        console.dir("Пользователь зарегистрирован");
+        this.$nuxt.$toast.success('Пользователь зарегистрирован!');
+        console.debug("Пользователь зарегистрирован");
       } catch (error) {
         switch (error.code) {
           case 'auth/email-already-in-use':
-            console.dir('Email already in use');
-            this.errorRegister = true
+            this.$nuxt.$toast.error('Что-то пошло не так!');
+            console.debug('Этот электронный адрес уже занят!');
             break;
           case 'auth/invalid-email':
-            console.dir('Invalid email');
-            this.errorRegister = true
+            this.$nuxt.$toast.error('Неверный адрес электронной почты!');
+            console.debug('Invalid email');
             break;
           case 'auth/operation-not-allowed':
-            console.dir('Operation not allowed');
-            this.errorRegister = true
+            this.$nuxt.$toast.error('Операция не разрешена!');
+            console.debug('Operation not allowed');
             break;
           case 'auth/weak-password':
-            console.dir('Weak password');
-            this.errorRegister = true
+            this.$nuxt.$toast.error('Слабый пароль!');
+            console.debug('Weak password');
             break;
           default:
-            console.dir("Something went wrong");
-            this.errorRegister = true
+            this.$nuxt.$toast.error('Что-то пошло не так!');
+            console.debug("Something went wrong");
             break;
         }
 

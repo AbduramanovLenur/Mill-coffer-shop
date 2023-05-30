@@ -65,12 +65,6 @@ export default {
       if (isValid) {
         this.register(this.form);
         this.addIsOpenRegisterModal('desktop');
-        if (this.errorRegister) {
-          this.$toast.error('Ошибка');
-        } else {
-          this.$toast.success('Пользователь зарегистрирован!');
-        }
-
         this.form = {
           email: '',
           password: '',
@@ -81,8 +75,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(useModalsStore, ['isOpenRegisterModal']),
-    ...mapState(useAuthStore, ['errorRegister'])
+    ...mapState(useModalsStore, ['isOpenRegisterModal'])
   }
 }
 </script>
